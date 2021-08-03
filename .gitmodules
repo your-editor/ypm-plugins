@@ -1,0 +1,3 @@
+[submodule "add_template"]
+	path = add_template
+	url = https://github.com/mickidymick/add_template.git
