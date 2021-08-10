@@ -4,3 +4,6 @@
 [submodule "auto_paren"]
 	path = auto_paren
 	url = https://github.com/mickidymick/auto_paren.git
+[submodule "find_bracket"]
+	path = find_bracket
+	url = https://github.com/mickidymick/find_bracket.git
