@@ -1,2 +1,1 @@
-# yed_plugins
-# woo
+# ypm_plugins
