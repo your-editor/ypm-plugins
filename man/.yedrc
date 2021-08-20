@@ -1,0 +1,1 @@
+# hook post-write multi 'shell-run MANWIDTH=80 man -l auto_paren.7' 'special-buffer-prepare-unfocus *shell-output'

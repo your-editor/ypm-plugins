@@ -1,0 +1,34 @@
+.TH YED-AUTO_PAREN 7 "YED Plugin Manuals" "" "YED Plugin Manuals"
+.SH NAME
+auto_paren \- automatically adds the matching character to these [({'"
+.SH CONFIGURATION
+.SS disable-auto-paren   "  " [ yes / no ]
+disables the automatic insert of a following )
+.SS disable-auto-bracket ""   [ yes / no ]
+disables the automatic insert of a following ]
+.SS disable-auto-dquote  " "  [ yes / no ]
+disables the automatic insert of a following "
+.SS disable-auto-quote   "  " [ yes / no ]
+disables the automatic insert of a following '
+.SS disable-auto-brace   "  " [ yes / no ]
+disables the automatic insert of a following }
+.SH COMMANDS
+none
+.SH NOTES
+.P
+When adding one of the special characters listed above to a buffer,
+the following character will be inserted for you. After insertion
+the cursor will be placed in the center of the two characters. If
+after adding one of the special characters you want to remove both
+hitting backspace on the first will remove both. If you want to
+disable a specific automatic insertion use the disable variables
+given in the configuration section. The only special case is the
+{}. When inserting a {, the relsult will look like this.
+
+    if(1) {
+        The cursor will start here tabbed.
+    }
+.SH VERSION
+0.0.1
+.SH KEYWORDS
+automatic, parenthesis, brackets, braces, single quotes, double quotes, finish
