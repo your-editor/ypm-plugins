@@ -7,6 +7,3 @@
 [submodule "ypm_plugins/find_bracket"]
 	path = ypm_plugins/find_bracket
 	url = git@github.com:mickidymick/find_bracket.git
-[submodule "ypm_plugins/lang/syntax/lang-syntax-c"]
-	path = ypm_plugins/lang/syntax/lang-syntax-c
-	url = git@github.com:mickidymick/lang-syntax-c.git
