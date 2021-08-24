@@ -1,0 +1,9 @@
+[submodule "ypm_plugins/add_template"]
+	path = ypm_plugins/add_template
+	url = git@github.com:mickidymick/add_template.git
+[submodule "ypm_plugins/auto_paren"]
+	path = ypm_plugins/auto_paren
+	url = git@github.com:mickidymick/auto_paren.git
+[submodule "ypm_plugins/find_bracket"]
+	path = ypm_plugins/find_bracket
+	url = git@github.com:mickidymick/find_bracket.git
