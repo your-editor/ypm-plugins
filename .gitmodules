@@ -13,3 +13,6 @@
 [submodule "ypm_plugins/loc_history"]
 	path = ypm_plugins/loc_history
 	url = git@github.com:mickidymick/loc_history.git
+[submodule "ypm_plugins/man"]
+	path = ypm_plugins/man
+	url = git@github.com:kammerdienerb/yed-man.git
