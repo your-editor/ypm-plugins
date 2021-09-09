@@ -1,261 +1,261 @@
 [submodule "ypm_plugins/add_template"]
 	path = ypm_plugins/add_template
-	url = git@github.com:mickidymick/add_template.git
+	url = https://github.com:mickidymick/add_template.git
 [submodule "ypm_plugins/auto_paren"]
 	path = ypm_plugins/auto_paren
-	url = git@github.com:mickidymick/auto_paren.git
+	url = https://github.com:mickidymick/auto_paren.git
 [submodule "ypm_plugins/find_bracket"]
 	path = ypm_plugins/find_bracket
-	url = git@github.com:mickidymick/find_bracket.git
+	url = https://github.com:mickidymick/find_bracket.git
 [submodule "ypm_plugins/loc_history"]
 	path = ypm_plugins/loc_history
-	url = git@github.com:mickidymick/loc_history.git
+	url = https://github.com:mickidymick/loc_history.git
 [submodule "ypm_plugins/man"]
 	path = ypm_plugins/man
-	url = git@github.com:kammerdienerb/yed-man.git
+	url = https://github.com:kammerdienerb/yed-man.git
 [submodule "ypm_plugins/ctags"]
 	path = ypm_plugins/ctags
-	url = git@github.com:kammerdienerb/yed-ctags.git
+	url = https://github.com:kammerdienerb/yed-ctags.git
 [submodule "ypm_plugins/style_use_term_bg"]
 	path = ypm_plugins/style_use_term_bg
-	url = git@github.com:kammerdienerb/yed-style_use_term_bg.git
+	url = https://github.com:kammerdienerb/yed-style_use_term_bg.git
 [submodule "ypm_plugins/scroll_buffer"]
 	path = ypm_plugins/scroll_buffer
-	url = git@github.com:kammerdienerb/yed-scroll_buffer.git
+	url = https://github.com:kammerdienerb/yed-scroll_buffer.git
 [submodule "ypm_plugins/paren_hl"]
 	path = ypm_plugins/paren_hl
-	url = git@github.com:kammerdienerb/yed-paren_hl.git
+	url = https://github.com:kammerdienerb/yed-paren_hl.git
 [submodule "ypm_plugins/comment"]
 	path = ypm_plugins/comment
-	url = git@github.com:kammerdienerb/yed-comment.git
+	url = https://github.com:kammerdienerb/yed-comment.git
 [submodule "ypm_plugins/jump_stack"]
 	path = ypm_plugins/jump_stack
-	url = git@github.com:kammerdienerb/yed-jump_stack.git
+	url = https://github.com:kammerdienerb/yed-jump_stack.git
 [submodule "ypm_plugins/yedrc"]
 	path = ypm_plugins/yedrc
-	url = git@github.com:kammerdienerb/yed-yedrc.git
+	url = https://github.com:kammerdienerb/yed-yedrc.git
 [submodule "ypm_plugins/shell_run"]
 	path = ypm_plugins/shell_run
-	url = git@github.com:kammerdienerb/yed-shell_run.git
+	url = https://github.com:kammerdienerb/yed-shell_run.git
 [submodule "ypm_plugins/grep"]
 	path = ypm_plugins/grep
-	url = git@github.com:kammerdienerb/yed-grep.git
+	url = https://github.com:kammerdienerb/yed-grep.git
 [submodule "ypm_plugins/calc"]
 	path = ypm_plugins/calc
-	url = git@github.com:kammerdienerb/yed-calc.git
+	url = https://github.com:kammerdienerb/yed-calc.git
 [submodule "ypm_plugins/completer"]
 	path = ypm_plugins/completer
-	url = git@github.com:kammerdienerb/yed-completer.git
+	url = https://github.com:kammerdienerb/yed-completer.git
 [submodule "ypm_plugins/lang/tools/latex"]
 	path = ypm_plugins/lang/tools/latex
-	url = git@github.com:kammerdienerb/yed-lang-tools-latex.git
+	url = https://github.com:kammerdienerb/yed-lang-tools-latex.git
 [submodule "ypm_plugins/lang/python"]
 	path = ypm_plugins/lang/python
-	url = git@github.com:kammerdienerb/yed-lang-python.git
+	url = https://github.com:kammerdienerb/yed-lang-python.git
 [submodule "ypm_plugins/lang/latex"]
 	path = ypm_plugins/lang/latex
-	url = git@github.com:kammerdienerb/yed-lang-latex.git
+	url = https://github.com:kammerdienerb/yed-lang-latex.git
 [submodule "ypm_plugins/lang/yedrc"]
 	path = ypm_plugins/lang/yedrc
-	url = git@github.com:kammerdienerb/yed-lang-yedrc.git
+	url = https://github.com:kammerdienerb/yed-lang-yedrc.git
 [submodule "ypm_plugins/lang/glsl"]
 	path = ypm_plugins/lang/glsl
-	url = git@github.com:kammerdienerb/yed-lang-glsl.git
+	url = https://github.com:kammerdienerb/yed-lang-glsl.git
 [submodule "ypm_plugins/lang/sh"]
 	path = ypm_plugins/lang/sh
-	url = git@github.com:kammerdienerb/yed-lang-sh.git
+	url = https://github.com:kammerdienerb/yed-lang-sh.git
 [submodule "ypm_plugins/lang/cpp"]
 	path = ypm_plugins/lang/cpp
-	url = git@github.com:kammerdienerb/yed-lang-cpp.git
+	url = https://github.com:kammerdienerb/yed-lang-cpp.git
 [submodule "ypm_plugins/lang/make"]
 	path = ypm_plugins/lang/make
-	url = git@github.com:kammerdienerb/yed-lang-make.git
+	url = https://github.com:kammerdienerb/yed-lang-make.git
 [submodule "ypm_plugins/lang/syntax/python"]
 	path = ypm_plugins/lang/syntax/python
-	url = git@github.com:kammerdienerb/yed-lang-syntax-python.git
+	url = https://github.com:kammerdienerb/yed-lang-syntax-python.git
 [submodule "ypm_plugins/lang/syntax/latex"]
 	path = ypm_plugins/lang/syntax/latex
-	url = git@github.com:kammerdienerb/yed-lang-syntax-latex.git
+	url = https://github.com:kammerdienerb/yed-lang-syntax-latex.git
 [submodule "ypm_plugins/lang/syntax/yedrc"]
 	path = ypm_plugins/lang/syntax/yedrc
-	url = git@github.com:kammerdienerb/yed-lang-syntax-yedrc.git
+	url = https://github.com:kammerdienerb/yed-lang-syntax-yedrc.git
 [submodule "ypm_plugins/lang/syntax/glsl"]
 	path = ypm_plugins/lang/syntax/glsl
-	url = git@github.com:kammerdienerb/yed-lang-syntax-glsl.git
+	url = https://github.com:kammerdienerb/yed-lang-syntax-glsl.git
 [submodule "ypm_plugins/lang/syntax/sh"]
 	path = ypm_plugins/lang/syntax/sh
-	url = git@github.com:kammerdienerb/yed-lang-syntax-sh.git
+	url = https://github.com:kammerdienerb/yed-lang-syntax-sh.git
 [submodule "ypm_plugins/lang/syntax/cpp"]
 	path = ypm_plugins/lang/syntax/cpp
-	url = git@github.com:kammerdienerb/yed-lang-syntax-cpp.git
+	url = https://github.com:kammerdienerb/yed-lang-syntax-cpp.git
 [submodule "ypm_plugins/lang/syntax/jgraph"]
 	path = ypm_plugins/lang/syntax/jgraph
-	url = git@github.com:kammerdienerb/yed-lang-syntax-jgraph.git
+	url = https://github.com:kammerdienerb/yed-lang-syntax-jgraph.git
 [submodule "ypm_plugins/lang/syntax/conf"]
 	path = ypm_plugins/lang/syntax/conf
-	url = git@github.com:kammerdienerb/yed-lang-syntax-conf.git
+	url = https://github.com:kammerdienerb/yed-lang-syntax-conf.git
 [submodule "ypm_plugins/lang/jgraph"]
 	path = ypm_plugins/lang/jgraph
-	url = git@github.com:kammerdienerb/yed-lang-jgraph.git
+	url = https://github.com:kammerdienerb/yed-lang-jgraph.git
 [submodule "ypm_plugins/lang/conf"]
 	path = ypm_plugins/lang/conf
-	url = git@github.com:kammerdienerb/yed-lang-conf.git
+	url = https://github.com:kammerdienerb/yed-lang-conf.git
 [submodule "ypm_plugins/lang/c"]
 	path = ypm_plugins/lang/c
-	url = git@github.com:kammerdienerb/yed-lang-c.git
+	url = https://github.com:kammerdienerb/yed-lang-c.git
 [submodule "ypm_plugins/styles/vt"]
 	path = ypm_plugins/styles/vt
-	url = git@github.com:kammerdienerb/yed-style-vt.git
+	url = https://github.com:kammerdienerb/yed-style-vt.git
 [submodule "ypm_plugins/styles/forest"]
 	path = ypm_plugins/styles/forest
-	url = git@github.com:kammerdienerb/yed-style-forest.git
+	url = https://github.com:kammerdienerb/yed-style-forest.git
 [submodule "ypm_plugins/styles/moss"]
 	path = ypm_plugins/styles/moss
-	url = git@github.com:kammerdienerb/yed-style-moss.git
+	url = https://github.com:kammerdienerb/yed-style-moss.git
 [submodule "ypm_plugins/styles/elly"]
 	path = ypm_plugins/styles/elly
-	url = git@github.com:kammerdienerb/yed-style-elly.git
+	url = https://github.com:kammerdienerb/yed-style-elly.git
 [submodule "ypm_plugins/styles/embark"]
 	path = ypm_plugins/styles/embark
-	url = git@github.com:kammerdienerb/yed-style-embark.git
+	url = https://github.com:kammerdienerb/yed-style-embark.git
 [submodule "ypm_plugins/styles/river"]
 	path = ypm_plugins/styles/river
-	url = git@github.com:kammerdienerb/yed-style-river.git
+	url = https://github.com:kammerdienerb/yed-style-river.git
 [submodule "ypm_plugins/styles/doug"]
 	path = ypm_plugins/styles/doug
-	url = git@github.com:kammerdienerb/yed-style-doug.git
+	url = https://github.com:kammerdienerb/yed-style-doug.git
 [submodule "ypm_plugins/styles/blue"]
 	path = ypm_plugins/styles/blue
-	url = git@github.com:kammerdienerb/yed-style-blue.git
+	url = https://github.com:kammerdienerb/yed-style-blue.git
 [submodule "ypm_plugins/styles/acme"]
 	path = ypm_plugins/styles/acme
-	url = git@github.com:kammerdienerb/yed-style-acme.git
+	url = https://github.com:kammerdienerb/yed-style-acme.git
 [submodule "ypm_plugins/styles/disco"]
 	path = ypm_plugins/styles/disco
-	url = git@github.com:kammerdienerb/yed-style-disco.git
+	url = https://github.com:kammerdienerb/yed-style-disco.git
 [submodule "ypm_plugins/styles/first"]
 	path = ypm_plugins/styles/first
-	url = git@github.com:kammerdienerb/yed-style-first.git
+	url = https://github.com:kammerdienerb/yed-style-first.git
 [submodule "ypm_plugins/styles/mordechai"]
 	path = ypm_plugins/styles/mordechai
-	url = git@github.com:kammerdienerb/yed-style-mordechai.git
+	url = https://github.com:kammerdienerb/yed-style-mordechai.git
 [submodule "ypm_plugins/styles/skyfall"]
 	path = ypm_plugins/styles/skyfall
-	url = git@github.com:kammerdienerb/yed-style-skyfall.git
+	url = https://github.com:kammerdienerb/yed-style-skyfall.git
 [submodule "ypm_plugins/styles/lab"]
 	path = ypm_plugins/styles/lab
-	url = git@github.com:kammerdienerb/yed-style-lab.git
+	url = https://github.com:kammerdienerb/yed-style-lab.git
 [submodule "ypm_plugins/styles/dracula"]
 	path = ypm_plugins/styles/dracula
-	url = git@github.com:kammerdienerb/yed-style-dracula.git
+	url = https://github.com:kammerdienerb/yed-style-dracula.git
 [submodule "ypm_plugins/styles/solarized"]
 	path = ypm_plugins/styles/solarized
-	url = git@github.com:kammerdienerb/yed-style-solarized.git
+	url = https://github.com:kammerdienerb/yed-style-solarized.git
 [submodule "ypm_plugins/styles/tempus_future"]
 	path = ypm_plugins/styles/tempus_future
-	url = git@github.com:kammerdienerb/yed-style-tempus_future.git
+	url = https://github.com:kammerdienerb/yed-style-tempus_future.git
 [submodule "ypm_plugins/styles/drift"]
 	path = ypm_plugins/styles/drift
-	url = git@github.com:kammerdienerb/yed-style-drift.git
+	url = https://github.com:kammerdienerb/yed-style-drift.git
 [submodule "ypm_plugins/styles/nord"]
 	path = ypm_plugins/styles/nord
-	url = git@github.com:kammerdienerb/yed-style-nord.git
+	url = https://github.com:kammerdienerb/yed-style-nord.git
 [submodule "ypm_plugins/styles/vt_light"]
 	path = ypm_plugins/styles/vt_light
-	url = git@github.com:kammerdienerb/yed-style-vt_light.git
+	url = https://github.com:kammerdienerb/yed-style-vt_light.git
 [submodule "ypm_plugins/styles/cadet"]
 	path = ypm_plugins/styles/cadet
-	url = git@github.com:kammerdienerb/yed-style-cadet.git
+	url = https://github.com:kammerdienerb/yed-style-cadet.git
 [submodule "ypm_plugins/styles/sammy"]
 	path = ypm_plugins/styles/sammy
-	url = git@github.com:kammerdienerb/yed-style-sammy.git
+	url = https://github.com:kammerdienerb/yed-style-sammy.git
 [submodule "ypm_plugins/styles/elise"]
 	path = ypm_plugins/styles/elise
-	url = git@github.com:kammerdienerb/yed-style-elise.git
+	url = https://github.com:kammerdienerb/yed-style-elise.git
 [submodule "ypm_plugins/styles/mrjantz"]
 	path = ypm_plugins/styles/mrjantz
-	url = git@github.com:kammerdienerb/yed-style-mrjantz.git
+	url = https://github.com:kammerdienerb/yed-style-mrjantz.git
 [submodule "ypm_plugins/styles/bullet"]
 	path = ypm_plugins/styles/bullet
-	url = git@github.com:kammerdienerb/yed-style-bullet.git
+	url = https://github.com:kammerdienerb/yed-style-bullet.git
 [submodule "ypm_plugins/styles/bold"]
 	path = ypm_plugins/styles/bold
-	url = git@github.com:kammerdienerb/yed-style-bold.git
+	url = https://github.com:kammerdienerb/yed-style-bold.git
 [submodule "ypm_plugins/styles/book"]
 	path = ypm_plugins/styles/book
-	url = git@github.com:kammerdienerb/yed-style-book.git
+	url = https://github.com:kammerdienerb/yed-style-book.git
 [submodule "ypm_plugins/styles/hat"]
 	path = ypm_plugins/styles/hat
-	url = git@github.com:kammerdienerb/yed-style-hat.git
+	url = https://github.com:kammerdienerb/yed-style-hat.git
 [submodule "ypm_plugins/styles/olive"]
 	path = ypm_plugins/styles/olive
-	url = git@github.com:kammerdienerb/yed-style-olive.git
+	url = https://github.com:kammerdienerb/yed-style-olive.git
 [submodule "ypm_plugins/styles/gruvbox"]
 	path = ypm_plugins/styles/gruvbox
-	url = git@github.com:kammerdienerb/yed-style-gruvbox.git
+	url = https://github.com:kammerdienerb/yed-style-gruvbox.git
 [submodule "ypm_plugins/styles/dalton"]
 	path = ypm_plugins/styles/dalton
-	url = git@github.com:kammerdienerb/yed-style-dalton.git
+	url = https://github.com:kammerdienerb/yed-style-dalton.git
 [submodule "ypm_plugins/styles/papercolor"]
 	path = ypm_plugins/styles/papercolor
-	url = git@github.com:kammerdienerb/yed-style-papercolor.git
+	url = https://github.com:kammerdienerb/yed-style-papercolor.git
 [submodule "ypm_plugins/styles/casey"]
 	path = ypm_plugins/styles/casey
-	url = git@github.com:kammerdienerb/yed-style-casey.git
+	url = https://github.com:kammerdienerb/yed-style-casey.git
 [submodule "ypm_plugins/styles/monokai"]
 	path = ypm_plugins/styles/monokai
-	url = git@github.com:kammerdienerb/yed-style-monokai.git
+	url = https://github.com:kammerdienerb/yed-style-monokai.git
 [submodule "ypm_plugins/styles/humanoid"]
 	path = ypm_plugins/styles/humanoid
-	url = git@github.com:kammerdienerb/yed-style-humanoid.git
+	url = https://github.com:kammerdienerb/yed-style-humanoid.git
 [submodule "ypm_plugins/align"]
 	path = ypm_plugins/align
-	url = git@github.com:kammerdienerb/yed-align.git
+	url = https://github.com:kammerdienerb/yed-align.git
 [submodule "ypm_plugins/style_picker"]
 	path = ypm_plugins/style_picker
-	url = git@github.com:kammerdienerb/yed-style_picker.git
+	url = https://github.com:kammerdienerb/yed-style_picker.git
 [submodule "ypm_plugins/macro"]
 	path = ypm_plugins/macro
-	url = git@github.com:kammerdienerb/yed-macro.git
+	url = https://github.com:kammerdienerb/yed-macro.git
 [submodule "ypm_plugins/profile"]
 	path = ypm_plugins/profile
-	url = git@github.com:kammerdienerb/yed-profile.git
+	url = https://github.com:kammerdienerb/yed-profile.git
 [submodule "ypm_plugins/brace_hl"]
 	path = ypm_plugins/brace_hl
-	url = git@github.com:kammerdienerb/yed-brace_hl.git
+	url = https://github.com:kammerdienerb/yed-brace_hl.git
 [submodule "ypm_plugins/find_file"]
 	path = ypm_plugins/find_file
-	url = git@github.com:kammerdienerb/yed-find_file.git
+	url = https://github.com:kammerdienerb/yed-find_file.git
 [submodule "ypm_plugins/log_hl"]
 	path = ypm_plugins/log_hl
-	url = git@github.com:kammerdienerb/yed-log_hl.git
+	url = https://github.com:kammerdienerb/yed-log_hl.git
 [submodule "ypm_plugins/indent_c"]
 	path = ypm_plugins/indent_c
-	url = git@github.com:kammerdienerb/yed-indent_c.git
+	url = https://github.com:kammerdienerb/yed-indent_c.git
 [submodule "ypm_plugins/autotrim"]
 	path = ypm_plugins/autotrim
-	url = git@github.com:kammerdienerb/yed-autotrim.git
+	url = https://github.com:kammerdienerb/yed-autotrim.git
 [submodule "ypm_plugins/line_numbers"]
 	path = ypm_plugins/line_numbers
-	url = git@github.com:kammerdienerb/yed-line_numbers.git
+	url = https://github.com:kammerdienerb/yed-line_numbers.git
 [submodule "ypm_plugins/builder"]
 	path = ypm_plugins/builder
-	url = git@github.com:kammerdienerb/yed-builder.git
+	url = https://github.com:kammerdienerb/yed-builder.git
 [submodule "ypm_plugins/style_pack"]
 	path = ypm_plugins/style_pack
-	url = git@github.com:kammerdienerb/yed-style_pack.git
+	url = https://github.com:kammerdienerb/yed-style_pack.git
 [submodule "ypm_plugins/status_bar_clock"]
 	path = ypm_plugins/status_bar_clock
-	url = git@github.com:kammerdienerb/yed-status_bar_clock.git
+	url = https://github.com:kammerdienerb/yed-status_bar_clock.git
 [submodule "ypm_plugins/vimish"]
 	path = ypm_plugins/vimish
-	url = git@github.com:kammerdienerb/yed-vimish.git
+	url = https://github.com:kammerdienerb/yed-vimish.git
 [submodule "ypm_plugins/cursor_word_hl"]
 	path = ypm_plugins/cursor_word_hl
-	url = git@github.com:kammerdienerb/yed-cursor_word_hl.git
+	url = https://github.com:kammerdienerb/yed-cursor_word_hl.git
 [submodule "ypm_plugins/hook"]
 	path = ypm_plugins/hook
-	url = git@github.com:kammerdienerb/yed-hook.git
+	url = https://github.com:kammerdienerb/yed-hook.git
 [submodule "ypm_plugins/lang/syntax/c"]
 	path = ypm_plugins/lang/syntax/c
-	url = git@github.com:kammerdienerb/yed-lang-syntax-c.git
+	url = https://github.com:kammerdienerb/yed-lang-syntax-c.git
