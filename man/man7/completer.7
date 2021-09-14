@@ -1,7 +1,9 @@
 .TH YED-COMPLETER 7 "YED Plugin Manuals" "" "YED Plugin Manuals"
 .SH NAME
-completer \- A basic word completion plugin activated on TAB.
+completer \- A basic completion plugin activated on TAB.
 .SH CONFIGURATION
+.SS completer-sources [ sources... ]
+Space-delimited list of completion sources to use. Default is "word".
 .SS completer-popup [ yes / no ]
 Whether or not do display the popup menu for completion results.
 Default value is "yes".
@@ -17,7 +19,7 @@ None
 None
 .SH NOTES
 .P
-Completer pulls words from all open buffers in yed.
+Completer uses the word ([a-Z0-9_]+) before the cursor as the search string.
 .SH VERSION
 0.0.1
 .SH KEYWORDS
