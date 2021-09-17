@@ -259,3 +259,6 @@
 [submodule "ypm_plugins/lang/syntax/c"]
 	path = ypm_plugins/lang/syntax/c
 	url = https://github.com/kammerdienerb/yed-lang-syntax-c.git
+[submodule "ypm_plugins/fstyle"]
+	path = ypm_plugins/fstyle
+	url = https://github.com/kammerdienerb/yed-fstyle
