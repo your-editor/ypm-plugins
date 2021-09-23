@@ -1,14 +1,15 @@
 .TH YED-ALIGN 7 "YED Plugin Manuals" "" "YED Plugin Manuals"
 .SH NAME
-align \- Align all first occurences of a string in a set of lines.
+word_wrap \- Wrap all selected lines to a given number of characters.
 .SH CONFIGURATION
 None
 .SH COMMANDS
-.SS align <string>
-Align all of the first occurences of <string> in the selected lines to the rightmost match in the set.
+.SS word-wrap <int>
+Wrap all selected lines to <int> characters.
+Most useful for writing prose: preserves paragraphs.
 .SH NOTES
 None
 .SH VERSION
 0.0.1
 .SH KEYWORDS
-text, align, column, format
+word, wrap, prose
