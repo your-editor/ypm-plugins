@@ -262,3 +262,6 @@
 [submodule "ypm_plugins/fstyle"]
 	path = ypm_plugins/fstyle
 	url = https://github.com/kammerdienerb/yed-fstyle
+[submodule "ypm_plugins/word_wrap"]
+	path = ypm_plugins/word_wrap
+	url = https://github.com/benbenolson/word_wrap.git
