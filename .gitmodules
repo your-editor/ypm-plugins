@@ -265,3 +265,6 @@
 [submodule "ypm_plugins/word_wrap"]
 	path = ypm_plugins/word_wrap
 	url = https://github.com/benbenolson/word_wrap.git
+[submodule "ypm_plugins/drill"]
+	path = ypm_plugins/drill
+	url = https://github.com/uniquepointer/yed-drill
