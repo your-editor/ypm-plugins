@@ -268,3 +268,6 @@
 [submodule "ypm_plugins/drill"]
 	path = ypm_plugins/drill
 	url = https://github.com/uniquepointer/yed-drill
+[submodule "ypm_plugins/styles/midnight"]
+	path = ypm_plugins/styles/midnight
+	url = https://github.com/uniquepointer/yed-style-midnight
