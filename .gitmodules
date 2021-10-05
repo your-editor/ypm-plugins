@@ -277,3 +277,6 @@
 [submodule "ypm_plugins/lang/syntax/go"]
 	path = ypm_plugins/lang/syntax/go
 	url = https://github.com/uniquepointer/yed-lang-syntax-go
+[submodule "ypm_plugins/lang/tools/gofmt"]
+	path = ypm_plugins/lang/tools/gofmt
+	url = https://github.com/uniquepointer/yed-lang-tools-gofmt
