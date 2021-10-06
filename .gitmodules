@@ -265,3 +265,18 @@
 [submodule "ypm_plugins/word_wrap"]
 	path = ypm_plugins/word_wrap
 	url = https://github.com/benbenolson/word_wrap.git
+[submodule "ypm_plugins/drill"]
+	path = ypm_plugins/drill
+	url = https://github.com/uniquepointer/yed-drill
+[submodule "ypm_plugins/styles/midnight"]
+	path = ypm_plugins/styles/midnight
+	url = https://github.com/uniquepointer/yed-style-midnight
+[submodule "ypm_plugins/lang/go"]
+	path = ypm_plugins/lang/go
+	url = https://github.com/uniquepointer/yed-lang-go
+[submodule "ypm_plugins/lang/syntax/go"]
+	path = ypm_plugins/lang/syntax/go
+	url = https://github.com/uniquepointer/yed-lang-syntax-go
+[submodule "ypm_plugins/lang/tools/gofmt"]
+	path = ypm_plugins/lang/tools/gofmt
+	url = https://github.com/uniquepointer/yed-lang-tools-gofmt
