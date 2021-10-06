@@ -24,7 +24,15 @@ write-buffer, then do q from above.
 .SH BUFFERS
 None
 .SH NOTES
-None
+.SS Recommended config
+bind "ctrl-o" jump-stack-pop
+
+drill-bind normal "g d" multi jump-stack-push ctags-jump-to-definition
+
+drill-bind normal "g e" 'cursor-buffer-end'
+
+drill-bind normal "g g" 'cursor-buffer-begin'
+
 .SH VERSION
 1000.0.1
 .SH KEYWORDS
