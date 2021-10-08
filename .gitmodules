@@ -283,3 +283,6 @@
 [submodule "ypm_plugins/styles/crunchy_leaves"]
 	path = ypm_plugins/styles/crunchy_leaves
 	url = https://github.com/imml3457/crunchy_leaves
+[submodule "ypm_plugins/go_menu"]
+	path = ypm_plugins/go_menu
+	url = https://github.com/kammerdienerb/yed-go_menu
