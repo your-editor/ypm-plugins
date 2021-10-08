@@ -279,7 +279,7 @@
 	url = https://github.com/uniquepointer/yed-lang-tools-gofmt
 [submodule "ypm_plugins/formatter"]
 	path = ypm_plugins/formatter
-	url = git@github.com:mickidymick/formatter.git
+	url = https://github.com/mickidymick/formatter.git
 [submodule "ypm_plugins/styles/crunchy_leaves"]
 	path = ypm_plugins/styles/crunchy_leaves
 	url = https://github.com/imml3457/crunchy_leaves
