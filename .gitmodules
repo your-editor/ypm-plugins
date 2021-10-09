@@ -244,9 +244,6 @@
 [submodule "ypm_plugins/style_pack"]
 	path = ypm_plugins/style_pack
 	url = https://github.com/kammerdienerb/yed-style_pack.git
-[submodule "ypm_plugins/status_bar_clock"]
-	path = ypm_plugins/status_bar_clock
-	url = https://github.com/kammerdienerb/yed-status_bar_clock.git
 [submodule "ypm_plugins/vimish"]
 	path = ypm_plugins/vimish
 	url = https://github.com/kammerdienerb/yed-vimish.git
@@ -265,3 +262,27 @@
 [submodule "ypm_plugins/word_wrap"]
 	path = ypm_plugins/word_wrap
 	url = https://github.com/benbenolson/word_wrap.git
+[submodule "ypm_plugins/drill"]
+	path = ypm_plugins/drill
+	url = https://github.com/uniquepointer/yed-drill
+[submodule "ypm_plugins/styles/midnight"]
+	path = ypm_plugins/styles/midnight
+	url = https://github.com/uniquepointer/yed-style-midnight
+[submodule "ypm_plugins/lang/go"]
+	path = ypm_plugins/lang/go
+	url = https://github.com/uniquepointer/yed-lang-go
+[submodule "ypm_plugins/lang/syntax/go"]
+	path = ypm_plugins/lang/syntax/go
+	url = https://github.com/uniquepointer/yed-lang-syntax-go
+[submodule "ypm_plugins/lang/tools/gofmt"]
+	path = ypm_plugins/lang/tools/gofmt
+	url = https://github.com/uniquepointer/yed-lang-tools-gofmt
+[submodule "ypm_plugins/formatter"]
+	path = ypm_plugins/formatter
+	url = https://github.com/mickidymick/formatter.git
+[submodule "ypm_plugins/styles/crunchy_leaves"]
+	path = ypm_plugins/styles/crunchy_leaves
+	url = https://github.com/imml3457/crunchy_leaves
+[submodule "ypm_plugins/go_menu"]
+	path = ypm_plugins/go_menu
+	url = https://github.com/kammerdienerb/yed-go_menu
