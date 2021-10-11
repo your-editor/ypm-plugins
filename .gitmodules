@@ -286,3 +286,9 @@
 [submodule "ypm_plugins/go_menu"]
 	path = ypm_plugins/go_menu
 	url = https://github.com/kammerdienerb/yed-go_menu
+[submodule "ypm_plugins/lang/zig"]
+	path = ypm_plugins/lang/zig
+	url = https://github.com/uniquepointer/yed-lang-zig
+[submodule "ypm_plugins/lang/syntax/zig"]
+	path = ypm_plugins/lang/syntax/zig
+	url = https://github.com/uniquepointer/yed-lang-syntax-zig
