@@ -292,3 +292,6 @@
 [submodule "ypm_plugins/lang/syntax/zig"]
 	path = ypm_plugins/lang/syntax/zig
 	url = https://github.com/uniquepointer/yed-lang-syntax-zig
+[submodule "ypm_plugins/pastebin"]
+	path = ypm_plugins/pastebin
+	url = https://github.com/uniquepointer/yed-pastebin
