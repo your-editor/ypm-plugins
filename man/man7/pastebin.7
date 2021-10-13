@@ -5,14 +5,53 @@
 .nh
 .ad l
 .\" Begin generated content:
-.TH "YED-PASTEBIN" "7" "YED Plugin Manuals"
+.TH "YED-PASTEBIN" "7" "YED Plugin Manual" "YED Plugin Manual"
 .P
 .SH NAME
 .P
 pastebin - Simple plugin for uploading your selection to a pastebin service.\&
 .P
 .SH CONFIGURATION
-None - for now.\&.\&.\&
+pastebin-fav - Specify which service to use, the current options are listed next.\&
+.RS 4
+.RS 4
+.ie n \{\
+\h'-04'\(bu\h'+03'\c
+.\}
+.el \{\
+.IP \(bu 4
+.\}
+ixio - Uses ix.\&io
+.RE
+.RS 4
+.ie n \{\
+\h'-04'\(bu\h'+03'\c
+.\}
+.el \{\
+.IP \(bu 4
+.\}
+paste-rs - Uses https://paste.\&rs
+.RE
+.RS 4
+.ie n \{\
+\h'-04'\(bu\h'+03'\c
+.\}
+.el \{\
+.IP \(bu 4
+.\}
+dpaste - Uses https://dpaste.\&org/
+.RE
+.RS 4
+.ie n \{\
+\h'-04'\(bu\h'+03'\c
+.\}
+.el \{\
+.IP \(bu 4
+.\}
+mozilla - Uses https://paste.\&mozilla.\&org/
+.RE
+
+.RE
 .SH COMMANDS
 pastebin
 .RS 4
@@ -23,6 +62,6 @@ None.\&
 .SH NOTES
 None.\&
 .SH VERSION
-1000.1\&
+1010.\&27
 .SH KEYWORDS
 pastebin, paste, text
