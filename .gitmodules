@@ -295,3 +295,6 @@
 [submodule "ypm_plugins/pastebin"]
 	path = ypm_plugins/pastebin
 	url = https://github.com/uniquepointer/yed-pastebin
+[submodule "ypm_plugins/a"]
+	path = ypm_plugins/a
+	url = https://github.com/uniquepointer/yed-a
