@@ -1,0 +1,19 @@
+.TH YED-GO_MENU 7 "YED Plugin Manuals" "" "YED Plugin Manuals"
+.SH NAME
+go_menu \- A quick buffer jump menu.
+.SH CONFIGURATION
+.SS go-menu-persistent-items [ paths... ]
+A space-delimited list of paths that should always be in the go-menu, whether they're open in buffers or not.
+These items are always shown at the bottom of the menu.
+.SH COMMANDS
+.SS go-menu
+Open the go-menu in a new frame. The frame is acquired by calling special-buffer-prepare-focus.
+.SH BUFFERS
+*go-menu
+.SH NOTES
+When the destination buffer is a special buffer, the buffer will be opened in the frame containing the go-menu.
+When the destination buffer is not special, it will be opened in the frame that was active before go-menu was called.
+.SH VERSION
+0.0.1
+.SH KEYWORDS
+jump buffer menu recent open
