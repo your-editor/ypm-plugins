@@ -292,3 +292,6 @@
 [submodule "ypm_plugins/zulu"]
 	path = ypm_plugins/zulu
 	url = git@github.com:mickidymick/zulu.git
+[submodule "ypm_plugins/pastebin"]
+	path = ypm_plugins/pastebin
+	url = https://github.com/uniquepointer/yed-pastebin
