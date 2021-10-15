@@ -298,3 +298,6 @@
 [submodule "ypm_plugins/a"]
 	path = ypm_plugins/a
 	url = https://github.com/uniquepointer/yed-a
+[submodule "ypm_plugins/sysclip"]
+	path = ypm_plugins/sysclip
+	url = https://github.com/uniquepointer/yed-sysclip
