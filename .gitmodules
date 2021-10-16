@@ -289,6 +289,9 @@
 [submodule "ypm_plugins/git_variables"]
 	path = ypm_plugins/git_variables
 	url = https://github.com/JacobMalloy/yed-git_variables.git
+[submodule "ypm_plugins/sysclip"]
+	path = ypm_plugins/sysclip
+	url = https://github.com/uniquepointer/yed-sysclip
 [submodule "ypm_plugins/lang/nix"]
 	path = ypm_plugins/lang/nix
 	url = https://github.com/uniquepointer/yed-lang-nix
