@@ -289,6 +289,12 @@
 [submodule "ypm_plugins/git_variables"]
 	path = ypm_plugins/git_variables
 	url = https://github.com/JacobMalloy/yed-git_variables.git
+[submodule "ypm_plugins/lang/nix"]
+	path = ypm_plugins/lang/nix
+	url = https://github.com/uniquepointer/yed-lang-nix
+[submodule "ypm_plugins/lang/syntax/nix"]
+	path = ypm_plugins/lang/syntax/nix
+	url = https://github.com/uniquepointer/yed-lang-syntax-nix
 [submodule "ypm_plugins/pastebin"]
 	path = ypm_plugins/pastebin
 	url = https://github.com/uniquepointer/yed-pastebin
@@ -301,4 +307,3 @@
 [submodule "ypm_plugins/lang/zig"]
 	path = ypm_plugins/lang/zig
 	url = https://github.com/uniquepointer/yed-lang-zig
-
