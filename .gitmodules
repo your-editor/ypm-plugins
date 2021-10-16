@@ -295,3 +295,15 @@
 [submodule "ypm_plugins/lang/syntax/nix"]
 	path = ypm_plugins/lang/syntax/nix
 	url = https://github.com/uniquepointer/yed-lang-syntax-nix
+[submodule "ypm_plugins/pastebin"]
+	path = ypm_plugins/pastebin
+	url = https://github.com/uniquepointer/yed-pastebin
+[submodule "ypm_plugins/styles/zulu"]
+	path = ypm_plugins/styles/zulu
+	url = https://github.com/mickidymick/yed-style-zulu.git
+[submodule "ypm_plugins/lang/syntax/zig"]
+	path = ypm_plugins/lang/syntax/zig
+	url = https://github.com/uniquepointer/yed-lang-syntax-zig
+[submodule "ypm_plugins/lang/zig"]
+	path = ypm_plugins/lang/zig
+	url = https://github.com/uniquepointer/yed-lang-zig
