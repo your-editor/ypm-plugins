@@ -289,9 +289,9 @@
 [submodule "ypm_plugins/git_variables"]
 	path = ypm_plugins/git_variables
 	url = https://github.com/JacobMalloy/yed-git_variables.git
-[submodule "ypm_plugins/zulu"]
-	path = ypm_plugins/zulu
-	url = git@github.com:mickidymick/zulu.git
+[submodule "ypm_plugins/styles/zulu"]
+	path = ypm_plugins/styles/zulu
+	url = https://github.com/mickidymick/yed-style-zulu.git
 [submodule "ypm_plugins/lang/syntax/zig"]
 	path = ypm_plugins/lang/syntax/zig
 	url = https://github.com/uniquepointer/yed-lang-syntax-zig
