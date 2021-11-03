@@ -310,3 +310,6 @@
 [submodule "ypm_plugins/lang/zig"]
 	path = ypm_plugins/lang/zig
 	url = https://github.com/uniquepointer/yed-lang-zig
+[submodule "ypm_plugins/convert"]
+	path = ypm_plugins/convert
+	url = https://github.com/mickidymick/convert.git
