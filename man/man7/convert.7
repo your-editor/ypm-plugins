@@ -1,17 +1,22 @@
-.TH YED-ADD_TEMPLATE 7 "YED Plugin Manuals" "" "YED Plugin Manuals"
+.TH YED-CONVERT 7 "YED Plugin Manuals" "" "YED Plugin Manuals"
 .SH NAME
-add_template \- pastes the specified template at the cursor location
+convert \- converts numbers between types or converts strings
 .SH CONFIGURATION
 None
 .SH COMMANDS
-.SS set-template [ template-name ]
-When this command is run the template that is passed will be pasted at the current cursor location
+.SS convert-number [ template-name ]
+.P
+When this command is run the current word the currsor is on will be parsed.
+If it is a number, a popup will show and allow the user to replace the current word with a conversion.
+Converts numbers between Decimal, Hex, Octal, Binary.
+If the current word is a string.
+A popup will show and allow the user to swap between Uppercase, Lowercase, Snakecase, and Camelcase.
 .SH BUFFERS
 None
 .SH NOTES
 .P
-The user must add templates to the ~/.yed/templates dir. The files must be named in this style [template-name.txt].
+The formats are as follows, Decimal is any number less than '18446744073709551615' and greater than '-9223372036854775808', Hex must start with '0x' or '0X', Binary must start with '0b', and Octal must start with '0'
 .SH VERSION
 0.0.1
 .SH KEYWORDS
-template, block paste
+convert, int, hex, octal, binary, uppercase, lowercase, snakecase, camelcase, replace.
