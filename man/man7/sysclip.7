@@ -6,7 +6,6 @@
 .ad l
 .\" Begin generated content:
 .TH "YED-SYSCLIP" "7" "YED Plugin Manual"
-.P
 .SH NAME
 sysclip - Description
 .SH CONFIGURATION
@@ -28,7 +27,47 @@ y2s - Stands for yank2system, yanks to your specified system clipboard defaults 
 .SH BUFFERS
 None.\&
 .SH NOTES
-Clipboards that fork will hang, like wl-clipboard, so do not use them, or at least turn off the forking if possible.\&
+Some clipboards need some extra flags to work with sys-clip for example:
+.RS 4
+.ie n \{\
+\h'-04'\(bu\h'+03'\c
+.\}
+.el \{\
+.IP \(bu 4
+.\}
+With "xclip" set as sys-clip, options flags "-i" and "-f" will be added so it does not hang, just select your text and run "y2s".\&
+
+.RE
+But others require no settings like:
+.RS 4
+.ie n \{\
+\h'-04'\(bu\h'+03'\c
+.\}
+.el \{\
+.IP \(bu 4
+.\}
+"xsel"
+.RE
+.RS 4
+.ie n \{\
+\h'-04'\(bu\h'+03'\c
+.\}
+.el \{\
+.IP \(bu 4
+.\}
+"wl-copy"
+- But only works with latest master build since wl-clipboard has not been updated in some repos since 2019.\&
+.RE
+.RS 4
+.ie n \{\
+\h'-04'\(bu\h'+03'\c
+.\}
+.el \{\
+.IP \(bu 4
+.\}
+Any other you should put the whole clipboard command to pipe to.\&
+
+.RE
 .SH VERSION
 1000.\&00
 .SH KEYWORDS
