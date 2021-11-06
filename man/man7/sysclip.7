@@ -5,7 +5,7 @@
 .nh
 .ad l
 .\" Begin generated content:
-.TH "YED-SYSCLIP" "7" "YED Plugin Manual"
+.TH "YED-SYSCLIP" "7" "6-11-2021" "YED Plugin Manual"
 .SH NAME
 sysclip - Description
 .SH CONFIGURATION
@@ -22,52 +22,31 @@ sys-clip - Specify your system clipboard.\&
 .RE
 
 .RE
+.SH EXAMPLE
+xsel almost never needs configuration :}
+.nf
+.RS 4
+set sys-clip 'xsel'
+.fi
+.RE
+This sets clipboard to wl-copy but you can only paste once.\&
+.nf
+.RS 4
+set sys-clip 'wl-copy -o'
+.fi
+.RE
+Here you specify the selection access to clipboard only.\&
+.nf
+.RS 4
+set sys-clip 'xclip -selection c'
+.fi
+.RE
 .SH COMMANDS
 y2s - Stands for yank2system, yanks to your specified system clipboard defaults to xsel.\&
 .SH BUFFERS
 None.\&
 .SH NOTES
-Some clipboards need some extra flags to work with sys-clip for example:
-.RS 4
-.ie n \{\
-\h'-04'\(bu\h'+03'\c
-.\}
-.el \{\
-.IP \(bu 4
-.\}
-With "xclip" set as sys-clip, options flags "-i" and "-f" will be added so it does not hang, just select your text and run "y2s".\&
-
-.RE
-But others require no settings like:
-.RS 4
-.ie n \{\
-\h'-04'\(bu\h'+03'\c
-.\}
-.el \{\
-.IP \(bu 4
-.\}
-"xsel"
-.RE
-.RS 4
-.ie n \{\
-\h'-04'\(bu\h'+03'\c
-.\}
-.el \{\
-.IP \(bu 4
-.\}
-"wl-copy"
-- But only works with latest master build since wl-clipboard has not been updated in some repos since 2019.\&
-.RE
-.RS 4
-.ie n \{\
-\h'-04'\(bu\h'+03'\c
-.\}
-.el \{\
-.IP \(bu 4
-.\}
-Any other you should put the whole clipboard command to pipe to.\&
-
-.RE
+None.\&
 .SH VERSION
 1000.\&00
 .SH KEYWORDS
