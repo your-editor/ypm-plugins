@@ -1,0 +1,26 @@
+.TH YED-UNIVERSAL_CLIPBOARD 7 "YED Plugin Manuals" "" "YED Plugin Manuals"
+.SH NAME
+universal_clipboard \- A plugin that can copy a selection to the systems clipboard using OSC 52.
+.SH CONFIGURATION
+.SS universal-copy-to-clipboard [yes/no]
+When true the selection will copy to the system keyboard on any yank-selection command.
+.SH COMMANDS
+.SS copy-to-universal-clipboard
+Copies the selection the system clipboard.
+.SH BUFFERS
+None
+.SH NOTES
+In order for this plugin to work your terminal emulator must support the osc 52 escape sequence. To test this paste the following line into a shell, if hello world is now in your clipboard, then your terminal is supported.
+
+printf "\033]52;c;$(printf "%s" "hello world" | base64)\a"
+
+Multiplexers such as screen and tmux can hinder operation. Tmux does work if you put the following two commands into your ~/.tmux.conf .
+
+set -g set-clipboard on
+
+set-option -ag terminal-overrides ",*:Ms=\\E]52;c;%p2%s\\7"
+
+.SH VERSION
+0.0.1
+.SH KEYWORDS
+clipboard system osc52 yank
