@@ -316,3 +316,6 @@
 [submodule "ypm_plugins/universal_clipboard"]
 	path = ypm_plugins/universal_clipboard
 	url = https://github.com/JacobMalloy/yed-universal_clipboard.git
+[submodule "ypm_plugins/confirm-quit"]
+	path = ypm_plugins/confirm-quit
+	url = https://github.com/spatel38305/confirm-quit.git
