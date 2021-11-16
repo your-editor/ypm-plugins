@@ -1,2 +1,2 @@
-# ypm_plugins
+# ypm-plugins
 # Version 1200
