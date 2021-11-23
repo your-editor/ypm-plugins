@@ -328,3 +328,6 @@
 [submodule "ypm_plugins/lang/javascript"]
 	path = ypm_plugins/lang/javascript
 	url = https://github.com/spatel38305/yed-lang-javascript
+[submodule "ypm_plugins/lang/syntax/javascript"]
+	path = ypm_plugins/lang/syntax/javascript
+	url = https://github.com/spatel38305/yed-lang-syntax-javascript
