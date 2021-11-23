@@ -319,3 +319,6 @@
 [submodule "ypm_plugins/confirm-quit"]
 	path = ypm_plugins/confirm-quit
 	url = https://github.com/spatel38305/confirm-quit.git
+[submodule "ypm_plugins/lang/syntax/make"]
+	path = ypm_plugins/lang/syntax/make
+	url = git@github.com:mickidymick/yed-make.git
