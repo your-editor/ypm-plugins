@@ -322,3 +322,6 @@
 [submodule "ypm_plugins/lang/syntax/make"]
 	path = ypm_plugins/lang/syntax/make
 	url = git@github.com:mickidymick/yed-make.git
+[submodule "ypm_plugins/make-tab"]
+	path = ypm_plugins/make-tab
+	url = https://github.com/spatel38305/make-tab
