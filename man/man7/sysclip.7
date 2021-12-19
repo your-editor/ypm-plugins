@@ -5,8 +5,7 @@
 .nh
 .ad l
 .\" Begin generated content:
-.TH "YED-SYSCLIP" "7" "YED Plugin Manual"
-.P
+.TH "YED-SYSCLIP" "7" "6-11-2021" "YED Plugin Manual"
 .SH NAME
 sysclip - Description
 .SH CONFIGURATION
@@ -23,12 +22,31 @@ sys-clip - Specify your system clipboard.\&
 .RE
 
 .RE
+.SH EXAMPLE
+xsel almost never needs configuration :}
+.nf
+.RS 4
+set sys-clip 'xsel'
+.fi
+.RE
+This sets clipboard to wl-copy but you can only paste once.\&
+.nf
+.RS 4
+set sys-clip 'wl-copy -o'
+.fi
+.RE
+Here you specify the selection access to clipboard only.\&
+.nf
+.RS 4
+set sys-clip 'xclip -selection c'
+.fi
+.RE
 .SH COMMANDS
 y2s - Stands for yank2system, yanks to your specified system clipboard defaults to xsel.\&
 .SH BUFFERS
 None.\&
 .SH NOTES
-Clipboards that fork will hang, like wl-clipboard, so do not use them, or at least turn off the forking if possible.\&
+None.\&
 .SH VERSION
 1000.\&00
 .SH KEYWORDS
