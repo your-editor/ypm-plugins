@@ -4,9 +4,6 @@
 [submodule "ypm_plugins/auto_paren"]
 	path = ypm_plugins/auto_paren
 	url = https://github.com/mickidymick/auto_paren.git
-[submodule "ypm_plugins/find_bracket"]
-	path = ypm_plugins/find_bracket
-	url = https://github.com/mickidymick/find_bracket.git
 [submodule "ypm_plugins/loc_history"]
 	path = ypm_plugins/loc_history
 	url = https://github.com/mickidymick/loc_history.git
@@ -259,9 +256,6 @@
 [submodule "ypm_plugins/fstyle"]
 	path = ypm_plugins/fstyle
 	url = https://github.com/kammerdienerb/yed-fstyle
-[submodule "ypm_plugins/word_wrap"]
-	path = ypm_plugins/word_wrap
-	url = https://github.com/benbenolson/word_wrap.git
 [submodule "ypm_plugins/drill"]
 	path = ypm_plugins/drill
 	url = https://github.com/uniquepointer/yed-drill
@@ -271,9 +265,6 @@
 [submodule "ypm_plugins/lang/go"]
 	path = ypm_plugins/lang/go
 	url = https://github.com/uniquepointer/yed-lang-go
-[submodule "ypm_plugins/lang/syntax/go"]
-	path = ypm_plugins/lang/syntax/go
-	url = https://github.com/uniquepointer/yed-lang-syntax-go
 [submodule "ypm_plugins/lang/tools/gofmt"]
 	path = ypm_plugins/lang/tools/gofmt
 	url = https://github.com/uniquepointer/yed-lang-tools-gofmt
@@ -295,39 +286,24 @@
 [submodule "ypm_plugins/lang/nix"]
 	path = ypm_plugins/lang/nix
 	url = https://github.com/uniquepointer/yed-lang-nix
-[submodule "ypm_plugins/lang/syntax/nix"]
-	path = ypm_plugins/lang/syntax/nix
-	url = https://github.com/uniquepointer/yed-lang-syntax-nix
 [submodule "ypm_plugins/pastebin"]
 	path = ypm_plugins/pastebin
 	url = https://github.com/uniquepointer/yed-pastebin
 [submodule "ypm_plugins/styles/zulu"]
 	path = ypm_plugins/styles/zulu
 	url = https://github.com/mickidymick/yed-style-zulu.git
-[submodule "ypm_plugins/lang/syntax/zig"]
-	path = ypm_plugins/lang/syntax/zig
-	url = https://github.com/uniquepointer/yed-lang-syntax-zig
 [submodule "ypm_plugins/lang/zig"]
 	path = ypm_plugins/lang/zig
 	url = https://github.com/uniquepointer/yed-lang-zig
 [submodule "ypm_plugins/convert"]
 	path = ypm_plugins/convert
 	url = https://github.com/mickidymick/convert.git
-[submodule "ypm_plugins/universal_clipboard"]
-	path = ypm_plugins/universal_clipboard
-	url = https://github.com/JacobMalloy/yed-universal_clipboard.git
 [submodule "ypm_plugins/confirm-quit"]
 	path = ypm_plugins/confirm-quit
 	url = https://github.com/spatel38305/confirm-quit.git
-[submodule "ypm_plugins/lang/syntax/make"]
-	path = ypm_plugins/lang/syntax/make
-	url = git@github.com:mickidymick/yed-make.git
 [submodule "ypm_plugins/make-tab"]
 	path = ypm_plugins/make-tab
 	url = https://github.com/spatel38305/make-tab
 [submodule "ypm_plugins/lang/javascript"]
 	path = ypm_plugins/lang/javascript
 	url = https://github.com/spatel38305/yed-lang-javascript
-[submodule "ypm_plugins/lang/syntax/javascript"]
-	path = ypm_plugins/lang/syntax/javascript
-	url = https://github.com/spatel38305/yed-lang-syntax-javascript
