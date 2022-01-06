@@ -12,13 +12,13 @@ None
 .SH NOTES
 In order for this plugin to work your terminal emulator must support the osc 52 escape sequence. To test this paste the following line into a shell, if hello world is now in your clipboard, then your terminal is supported.
 
-printf "\033]52;c;$(printf "%s" "hello world" | base64)\a"
+printf "\\033]52;c;$(printf "%s" "hello world" | base64)\\a"
 
 Multiplexers such as screen and tmux can hinder operation. Tmux does work if you put the following two commands into your ~/.tmux.conf .
 
 set -g set-clipboard on
 
-set-option -ag terminal-overrides ",*:Ms=\\E]52;c;%p2%s\\7"
+set-option -ag terminal-overrides ",*:Ms=\\\\E]52;c;%p2%s\\\\7"
 
 .SH VERSION
 0.0.1
