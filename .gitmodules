@@ -310,3 +310,6 @@
 [submodule "ypm_plugins/yule_2021"]
 	path = ypm_plugins/yule_2021
 	url = https://github.com/kammerdienerb/yed-yule_2021
+[submodule "ypm_plugins/universal_clipboard"]
+	path = ypm_plugins/universal_clipboard
+	url = https://github.com/jacobmalloy/yed-universal_clipboard
