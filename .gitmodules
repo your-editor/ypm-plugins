@@ -307,3 +307,6 @@
 [submodule "ypm_plugins/lang/javascript"]
 	path = ypm_plugins/lang/javascript
 	url = https://github.com/spatel38305/yed-lang-javascript
+[submodule "ypm_plugins/yule_2021"]
+	path = ypm_plugins/yule_2021
+	url = https://github.com/kammerdienerb/yed-yule_2021
