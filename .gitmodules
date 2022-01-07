@@ -325,3 +325,6 @@
 [submodule "ypm_plugins/find_bracket"]
 	path = ypm_plugins/find_bracket
 	url = git@github.com:mickidymick/find_bracket.git
+[submodule "ypm_plugins/lang/syntax/make"]
+	path = ypm_plugins/lang/syntax/make
+	url = git@github.com:mickidymick/yed-make.git
