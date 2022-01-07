@@ -1,0 +1,21 @@
+.TH YED-MOUSE-MENU 7 "YED Plugin Manuals" "" "YED Plugin Manuals"
+.SH NAME
+mouse-menu \- gives a configurable menu on right click
+.SH CONFIGURATION
+.SS mouse-menu-on-word
+This configuration sets the menu when right clicking on a word and takes a string of space separated tuples where the first thing is the name of the line in the menu and the second thing is the command it will run such as "Paste paste-yank-buffer"
+.SS mouse-menu-on-selection
+This configuration sets the menu when right clicking and a selection is active and takes a string of space separated tuples where the first thing is the name of the line in the menu and the second thing is the command it will run such as "Copy yank-selection"
+.SS mouse-menu-on-nothing
+This configuration sets the menu when right clicking on the background and takes a string of space separated tuples where the first thing is the name of the line in the menu and the second thing is the command it will run such as "'Frame New' frame-new"
+.SH COMMANDS
+None
+.SH BUFFERS
+None
+.SH NOTES
+.P The menu variables are parsed and as such allow for nesting of single and double quotes by one layer as well as escaping them with \
+None
+.SH VERSION
+0.0.1
+.SH KEYWORDS
+mouse, click, select, right, support, menu

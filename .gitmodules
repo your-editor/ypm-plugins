@@ -316,3 +316,12 @@
 [submodule "ypm_plugins/lang/syntax/javascript"]
 	path = ypm_plugins/lang/syntax/javascript
 	url = https://github.com/spatel38305/yed-lang-syntax-javascript
+[submodule "ypm_plugins/mouse"]
+	path = ypm_plugins/mouse
+	url = git@github.com:mickidymick/mouse.git
+[submodule "ypm_plugins/mouse_menu"]
+	path = ypm_plugins/mouse_menu
+	url = git@github.com:mickidymick/mouse_menu.git
+[submodule "ypm_plugins/find_bracket"]
+	path = ypm_plugins/find_bracket
+	url = git@github.com:mickidymick/find_bracket.git
