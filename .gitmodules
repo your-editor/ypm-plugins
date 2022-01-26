@@ -328,3 +328,6 @@
 [submodule "ypm_plugins/lang/syntax/make"]
 	path = ypm_plugins/lang/syntax/make
 	url = https://github.com/mickidymick/yed-make.git
+[submodule "ypm_plugins/mouse_frame_control"]
+	path = ypm_plugins/mouse_frame_control
+	url = https://github.com/mickidymick/mouse_frame_control.git
