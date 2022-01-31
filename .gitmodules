@@ -337,3 +337,6 @@
 [submodule "ypm_plugins/lang/syntax/linker"]
 	path = ypm_plugins/lang/syntax/linker
 	url = https://github.com/kammerdienerb/yed-lang-syntax-linker
+[submodule "ypm_plugins/auto-save"]
+	path = ypm_plugins/auto-save
+	url = https://github.com/spatel38305/auto-save
