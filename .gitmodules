@@ -331,3 +331,9 @@
 [submodule "ypm_plugins/mouse_frame_control"]
 	path = ypm_plugins/mouse_frame_control
 	url = https://github.com/mickidymick/mouse_frame_control.git
+[submodule "ypm_plugins/lang/linker"]
+	path = ypm_plugins/lang/linker
+	url = https://github.com/kammerdienerb/yed-lang-linker
+[submodule "ypm_plugins/lang/syntax/linker"]
+	path = ypm_plugins/lang/syntax/linker
+	url = https://github.com/kammerdienerb/yed-lang-syntax-linker
