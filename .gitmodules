@@ -340,3 +340,6 @@
 [submodule "ypm_plugins/auto-save"]
 	path = ypm_plugins/auto-save
 	url = https://github.com/spatel38305/auto-save
+[submodule "ypm_plugins/command-history"]
+	path = ypm_plugins/command-history
+	url = https://github.com/spatel38305/command-history
