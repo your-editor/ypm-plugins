@@ -343,3 +343,9 @@
 [submodule "ypm_plugins/command-history"]
 	path = ypm_plugins/command-history
 	url = https://github.com/spatel38305/command-history
+[submodule "ypm_plugins/lang/rust"]
+	path = ypm_plugins/lang/rust
+	url = https://github.com/jacobmalloy/yed-lang-rust
+[submodule "ypm_plugins/lang/syntax/rust"]
+	path = ypm_plugins/lang/syntax/rust
+	url = https://github.com/jacobmalloy/yed-lang-syntax-rust
