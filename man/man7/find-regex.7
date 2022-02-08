@@ -1,0 +1,92 @@
+.TH YED-FIND-REGEX 7 "YED Plugin Manuals" "" "YED Plugin Manuals"
+
+.SH NAME
+find-regex \- A plugin for searching and replacing strings using regular expressions.
+
+.SH CONFIGURATION
+.SS find-regex-search-prompt <prompt>
+Set the prompt which appears during the interactive search. Default is '(find-in-buffer) '.
+
+.SS find-regex-replace-prompt <prompt>
+Set the prompt which appears during the interactive replace. Default is '(replace-current-search) '.
+
+.SS find-regex-search-all-frames <boolean>
+Set true or false whether to search all frames for strings. Default is 'true'.
+
+.SS find-regex-replace-default-commands <boolean>
+Should this plugin replace the default commands `find-in-buffer`,
+`replace-current-search`, `find-next-in-buffer`, and `find-prev-in-buffer` with
+the associated regex command (see COMMANDS below)? Default is 'false'.
+
+.SH COMMANDS
+.SS find-in-buffer-regex [expression]
+Searches the buffer and highlights matches.
+
+Expression can be a regular expression. If one is given, search the entire
+buffer for strings which match the regular expression. If no expression is
+given then interactive command mode is activated and strings in the buffer are
+highlighted as they are matched.
+
+.SS replace-current-search-regex [string]
+
+Replace the the current matches in the buffer with the given string.
+
+.SS find-next-in-buffer-regex
+Moves the cursor to the next match in the buffer. Moves the cursor to the next match at the top of the buffer if at the bottom.
+
+.SS find-prev-in-buffer-regex
+Moves the cursor to the previous match in the buffer. Moves the cursor to the next match at the bottom of the buffer if at the top.
+
+.SS find-and-replace-regex <expression>
+Use a sed expression to find matches in the buffer and replace them with a given
+string.
+
+Expression format: [start,][end][%]s/[search]/[replacement]/[options]
+
+`start` is the line where searching begins. If `start` is given, `end` is
+required.
+
+`end' is the end line to stop searching. If only `end` is given (with no
+`start`), then we assume we are only searching that line.
+
+`%` means to search all lines. If '%' is present, `start` and `end` should not be.
+
+`search` is an optional regular expression used to find matches. If no `search`
+expression is given, then the expression from `find-in-buffer` is used.
+
+`replacement` is an optional string that replaces any matches in the buffer. If
+`replacement` isn't given, matches will be removed from the buffer, i.e. replaced with nothing.
+
+`options` are a combination of 'g', 'i', and 'c' which means to search globally
+(multiple times) in a line, ignore case, and confirm each replacement
+respectively.
+
+Examples:
+
+    s/foo/bar/g : replace all instances of `foo` with `bar` on the current line
+
+    256s/->/\\./ : replace the first instance of `->` with `.` on line 256
+
+    %s/BAD//g : remove all instances of `BAD` from the buffer
+
+    %s/for/loop/gc : replace all instances of `for` with `loop` and confirm each replacement
+
+    0,5s/global/GLOBAL/i : replace the first instance of `global`, case ignored, with `GLOBAL` on lines 0 through 5
+
+    %s//foobar/g : replace the current matches in the buffer with `foobar`
+
+    %s///g : remove the current matches from the buffer
+
+.SH BUFFERS
+None
+
+.SH NOTES
+The following features have not been implemented yet: searching all frames,
+searching specific lines or a range of lines during `find-and-replace-regex` (all
+lines are always searched), and replacement confirmation.
+
+.SH VERSION
+0.0.1
+
+.SH KEYWORDS
+find, search, regex, regular expression, highlight
