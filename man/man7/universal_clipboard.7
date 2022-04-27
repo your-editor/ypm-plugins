@@ -3,7 +3,9 @@
 universal_clipboard \- A plugin that can copy a selection to the systems clipboard using OSC 52.
 .SH CONFIGURATION
 .SS universal-copy-to-clipboard [yes/no]
-When true the selection will copy to the system keyboard on any yank-selection command.
+When truthy the selection will copy to the system keyboard on any yank-selection command.
+.SS universal-clipboard-trim-nl [yes/no]
+When truthy a trailing new line will be removed from the text that is copied to the systems clipboard.
 .SH COMMANDS
 .SS copy-to-universal-clipboard
 Copies the selection the system clipboard.
