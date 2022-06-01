@@ -349,3 +349,6 @@
 [submodule "ypm_plugins/lang/syntax/rust"]
 	path = ypm_plugins/lang/syntax/rust
 	url = https://github.com/jacobmalloy/yed-lang-syntax-rust
+[submodule "ypm_plugins/lang/syntax/diff_hl"]
+	path = ypm_plugins/lang/syntax/diff_hl
+	url = git@github.com:mickidymick/diff_hl.git
