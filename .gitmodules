@@ -352,3 +352,6 @@
 [submodule "ypm_plugins/lang/syntax/diff_hl"]
 	path = ypm_plugins/lang/syntax/diff_hl
 	url = git@github.com:mickidymick/diff_hl.git
+[submodule "ypm_plugins/custom_frames"]
+	path = ypm_plugins/custom_frames
+	url = git@github.com:mickidymick/custom_frames.git
