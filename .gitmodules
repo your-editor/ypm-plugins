@@ -355,3 +355,6 @@
 [submodule "ypm_plugins/custom_frames"]
 	path = ypm_plugins/custom_frames
 	url = https://github.com/mickidymick/custom_frames
+[submodule "ypm_plugins/terminal"]
+	path = ypm_plugins/terminal
+	url = https://github.com/kammerdienerb/yed-terminal
