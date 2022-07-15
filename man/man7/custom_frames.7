@@ -2,25 +2,37 @@
 .SH NAME
 custom_frames \- Gives a configurable framework to attach custom frames and special animations to special buffers
 .SH CONFIGURATION
+.SS see commands
+.SH COMMANDS
 .SS set-custom-buffer-frame (frame-name[""]) (split/float['f']) (close-after[0/1]) (max-x[0.0/1.0]) (max-y[0.0/1.0]) (max-width[0.0/1.0]) (max-height[0.0/1.0])
                     (use-animation[0/1]) (min-x[0.0/1.0]) (min-y[0.0/1.0]) (min-width[0.0/1.0]) (min-height[0.0/1.0]) (speed[int]) (buff-arr["*buff *buff *buff"])
 .SS set-custom-buffer-frame (frame-name[""]) (split/float['s']) (close-after[0/1]) (max-split['h'/'v']) (max-loc[('t'/'b')/('l'/'r')]) (max-use-root['r'/'a'])
                     (max-size[0.0/1.0]) (max-heirarchy[int]) (use-animation[0/1]) (min-size[0.0/1.0]) (speed[int]) (buff-arr["*buff *buff *buff"])
-.SH COMMANDS
-.SS set_custom_buffer_frame (frame-name[""]) (split/float['s'/'f']) (close-after[0/1]) (max-x[0.0/1.0]) (max-y[0.0/1.0]) (max-width[0.0/1.0]) (max-height[0.0/1.0])
-                    (use-animation[0/1]) (min-x[0.0/1.0]) (min-y[0.0/1.0]) (min-width[0.0/1.0]) (min-height[0.0/1.0]) (speed[int]) (buff-arr["*buff *buff *buff"])
-.SS set_custom_buffer_frame (frame-name[""]) (split/float['s'/'f']) (close-after[0/1]) (max-split['h'/'v']) (max-loc[('t'/'b')/('l'/'r')]) (max-use-root['r'/'a'])
-                    (max-size[0.0/1.0]) (max-heirarchy[int]) (use-animation[0/1]) (min-size[0.0/1.0]) (speed[int]) (buff-arr["*buff *buff *buff"])
 .SS special-buffer-prepare-focus "*buffer_name"
+.SS special-buffer-prepare-jump-focus "*buffer_name"
 .SS special-buffer-prepare-unfocus "*buffer_name"
 
 .SH BUFFERS
 None
 .SH NOTES
-.P This plugin overrides two core YED functions, special_buffer_prepare_focus and special_buffer_prepare_unfocus.
+.P This plugin overrides three core YED functions, special-buffer-prepare-focus special-buffer-prepare-jump-focus and special-buffer-prepare-unfocus.
 The way that you use this plugin is as follows. Add a configuration line in your yedrc for every frame that you want to behave a certain way.
 You then can set up the parameters of how that frame should function and then what buffers you want to open in that type of frame. I will describe
-the parameters now. The first is the frame-name and it is taken in as a string. The second is where the config splits in two directions, you can choose
+the parameters now.
+.SS frame-name: {""} The new frame's name.
+.SS split/float: {'s' / 'f'} Wether you want the new frame to be a split of a frame or a new "floating" frame.
+.SS close-after: {0 / 1} Wether you want to close the frame when another frame is activated.
+.SS --------------------
+.SS if split/float == 'f'
+.SS max-x: {0.0 / 1.0} The starting x position of the "full sized" frame. 0.0 is far left and 1.0 is far right.
+.SS max-y: {0.0 / 1.0} The starting y position of the "full sized" frame. 0.0 is far left and 1.0 is far right.
+
+
+
+
+
+
+.P The first is the frame-name and it is taken in as a string. The second is where the config splits in two directions, you can choose
 either a floating style frame that is not attached to anything else, or you may choose a split of a frame. I will talk about floating frames first. The
 third parameter decides wether to close the frame or not after making the frame not the active frame. The next four parameters decide the bounding box of
 the "max/normal" size of the frame. 0.0/0.0 is the top left and 1.0/1.0 is the bottom right of the space for x and y, width and height work the same way.

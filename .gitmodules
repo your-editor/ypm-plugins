@@ -358,3 +358,6 @@
 [submodule "ypm_plugins/terminal"]
 	path = ypm_plugins/terminal
 	url = https://github.com/kammerdienerb/yed-terminal
+[submodule "ypm_plugins/save_layout"]
+	path = ypm_plugins/save_layout
+	url = https://github.com/mickidymick/save_layout.git
