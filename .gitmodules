@@ -361,3 +361,6 @@
 [submodule "ypm_plugins/save_layout"]
 	path = ypm_plugins/save_layout
 	url = https://github.com/mickidymick/save_layout.git
+[submodule "ypm_plugins/tree_view"]
+	path = ypm_plugins/tree_view
+	url = https://github.com/mickidymick/tree_view.git

@@ -1,0 +1,24 @@
+.TH YED-TREE_VIEW 7 "YED Plugin Manuals" "" "YED Plugin Manuals"
+.SH NAME
+tree_view \- A buffer that shows a tree view of all files.
+.SH CONFIGURATION
+.SS tree-view-update-period: number of seconds between updates defualt is 5seconds.
+.SS tree-view-hidden-items: space separated string of substrings to
+keep from appearing in the tree_view.
+.SS tree-view-image-extensions: space separated string of extra extensions to
+check for when determining if a file is an image file or not.
+.SS tree-view-archive-extensions: space separated string of extra extensions to
+check for when determining if a file is an archive file or not.
+.SS tree-view-child-char-l: character of l shape in tree_view, default is "└".
+.SS tree-view-child-char-i: character of i shape in tree_view, default is "│".
+.SS tree-view-child-char-t: character of t shape in tree_view, default is "├".
+.SH COMMANDS
+.SS tree-view: opens the tree-view-list buffer.
+.SH BUFFERS
+None
+.SH NOTES
+None
+.SH VERSION
+0.0.1
+.SH KEYWORDS
+tree_view, special, buffers
