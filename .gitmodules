@@ -364,3 +364,9 @@
 [submodule "ypm_plugins/tree_view"]
 	path = ypm_plugins/tree_view
 	url = https://github.com/mickidymick/tree_view.git
+[submodule "ypm_plugins/lang/bpftrace"]
+	path = ypm_plugins/lang/bpftrace
+	url = https://github.com/mickidymick/yed-lang-bpftrace.git
+[submodule "ypm_plugins/lang/syntax/bpftrace"]
+	path = ypm_plugins/lang/syntax/bpftrace
+	url = https://github.com/mickidymick/yed-lang-syntax-bpftrace.git
