@@ -10,9 +10,10 @@ custom_frames \- Gives a configurable framework to attach custom frames and spec
 .SS split
 .SS set-custom-buffer-frame (frame-name[""]) (split/float['s']) (close-after[0/1]) (max-split['h'/'v']) (max-loc[('t'/'b')/('l'/'r')]) (max-use-root['r'/'a'])
                     (max-size[0.0/1.0]) (max-heirarchy[int]) (use-animation[0/1]) (min-size[0.0/1.0]) (speed[int]) (buff-arr["*buff *buff *buff"])
-.SS special-buffer-prepare-focus "*buffer_name"
-.SS special-buffer-prepare-jump-focus "*buffer_name"
-.SS special-buffer-prepare-unfocus "*buffer_name"
+.SS special-buffer-prepare-focus-custom "*buffer_name" Overloading this function allows the user to manipulate the default way a new frame is opened for a *buffer.
+.SS special-buffer-prepare-focus "*buffer_name" This function is overloaded and must not be manipulated elsewhere.
+.SS special-buffer-prepare-jump-focus "*buffer_name" This function is overloaded and must not be manipulated elsewhere.
+.SS special-buffer-prepare-unfocus "*buffer_name" This function is overloaded and must not be manipulated elsewhere.
 
 .SH BUFFERS
 None
