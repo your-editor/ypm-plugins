@@ -4,8 +4,10 @@ custom_frames \- Gives a configurable framework to attach custom frames and spec
 .SH CONFIGURATION
 .SS see commands
 .SH COMMANDS
+.SS float
 .SS set-custom-buffer-frame (frame-name[""]) (split/float['f']) (close-after[0/1]) (max-x[0.0/1.0]) (max-y[0.0/1.0]) (max-width[0.0/1.0]) (max-height[0.0/1.0])
                     (use-animation[0/1]) (min-x[0.0/1.0]) (min-y[0.0/1.0]) (min-width[0.0/1.0]) (min-height[0.0/1.0]) (speed[int]) (buff-arr["*buff *buff *buff"])
+.SS split
 .SS set-custom-buffer-frame (frame-name[""]) (split/float['s']) (close-after[0/1]) (max-split['h'/'v']) (max-loc[('t'/'b')/('l'/'r')]) (max-use-root['r'/'a'])
                     (max-size[0.0/1.0]) (max-heirarchy[int]) (use-animation[0/1]) (min-size[0.0/1.0]) (speed[int]) (buff-arr["*buff *buff *buff"])
 .SS special-buffer-prepare-focus "*buffer_name"
@@ -19,33 +21,44 @@ None
 The way that you use this plugin is as follows. Add a configuration line in your yedrc for every frame that you want to behave a certain way.
 You then can set up the parameters of how that frame should function and then what buffers you want to open in that type of frame. I will describe
 the parameters now.
-.SS frame-name: {""} The new frame's name.
-.SS split/float: {'s' / 'f'} Wether you want the new frame to be a split of a frame or a new "floating" frame.
-.SS close-after: {0 / 1} Wether you want to close the frame when another frame is activated.
+.SS frame-name: "" [""] "      " The new frame's name that will behave in a specific pattern when a linked buffer is opened or activated.
+.SS split/float: ['s' / 'f'] Wether you want the new frame to be a split of a frame or a new "floating" frame.
+.SS close-after: [0 / 1] "   " Wether you want to close the frame when another frame is activated.
 .SS --------------------
 .SS if split/float == 'f'
-.SS max-x: {0.0 / 1.0} The starting x position of the "full sized" frame. 0.0 is far left and 1.0 is far right.
-.SS max-y: {0.0 / 1.0} The starting y position of the "full sized" frame. 0.0 is far left and 1.0 is far right.
-
-
-
-
-
-
-.P The first is the frame-name and it is taken in as a string. The second is where the config splits in two directions, you can choose
-either a floating style frame that is not attached to anything else, or you may choose a split of a frame. I will talk about floating frames first. The
-third parameter decides wether to close the frame or not after making the frame not the active frame. The next four parameters decide the bounding box of
-the "max/normal" size of the frame. 0.0/0.0 is the top left and 1.0/1.0 is the bottom right of the space for x and y, width and height work the same way.
-The animation flag sets wether or not for the frame to animate when opening/closing/going between active and not. If you do not want the frame to animate then
-the next 4 parameters describe here are unnecisary but they are the minimum size of the frame when deactivated. The next is also unnecisarry if no animations
-are used but is the speed at which then frame will animate in hz or screen updates/second. The last parameter is a space separated string of all the special
-buffers that you want to apply to this frame. The next section will talk about the splits. If split is chosen then you can either pick a 'h'=horizontal/'v'=vertical
-split then next parameter decides which frame of the split to put the buffer in. If you choose 'v' then you can choose between 'l'=left/'r'=right side and if you
-choose 'h' then you can choose between 't'=top/'b'=bottom. The next parameter lets you choose where to split the frame from, either the root frame or the
-active frame. The best way to understand this is that if the root frame is chosen the frames with work the exact same way everytime, more or less. The next parameter
-is the "max/normal" size of the frame in terms of width or height based on wether you chose 'v'/'h'. The last different parameter is heirarchy this is a integer
-0-9999 that describes a way for one split to supercede or use the full frame over another. If a frame has a smaller number then it is more important that another
-and will overlap larger number ones.
+.SS "    " max-x: "    " [0.0 \- 1.0] The starting x position of the "full sized" frame. 0.0 is far left and 1.0 is far right.
+.SS "    " max-y: "    " [0.0 \- 1.0] The starting y position of the "full sized" frame. 0.0 is far left and 1.0 is far right.
+.SS "    " max-width: "" [0.0 \- 1.0] The width of the "full sized" frame.
+.SS "    " max-height: [0.0 \- 1.0] The height of the "full sized" frame.
+.SS --------------------
+.SS if split/float == 's'
+.SS "    " max-split: ['h' / 'v'] Wether the split will be along the 'h' horizontal or 'v' vertical axis.
+.SS "    " --------------------
+.SS "    " if max-split == 'h'
+.SS "    " "    " max-loc: ['t' / 'b'] Wether you want to set the new frame in the 't' top or 'b' bottom of the new horizontal split.
+.SS "    " --------------------
+.SS "    " if max-split == 'v'
+.SS "    " "    " max-loc: ['l' / 'r'] Wether you want to set the new frame in the 'l' left or 'r' right of the new vertical split.
+.SS "    " --------------------
+.SS "    " max-use-root: "" ['r' / 'a'] Wether you want the split to be off of the 'r' root frame or the 'a' active frame.
+.SS "    " max-size: "    " [0.0 \- 1.0] The width or height of the "full sized" split frame based on the max size of the root frame.
+.SS "    " max-heirarchy: [int] "     " This sets the precidence for frame overlap. The lower the number the higher the precidence. A frame with heirarchy of 0 will allways overlap one with 1.
+.SS --------------------
+.SS use-animation: [0 / 1] Wether or not you want to make the frame use animations.
+.SS --------------------
+.SS if use-animation == 1
+.SS "    " if split/float == 'f'
+.SS "    " "    " min-x: "    " [0.0 \- 1.0] The starting x position of the "minimum sized" frame. 0.0 is far left and 1.0 is far right.
+.SS "    " "    " min-y: "    " [0.0 \- 1.0] The starting y position of the "minimum sized" frame. 0.0 is far left and 1.0 is far right.
+.SS "    " "    " min-width: "" [0.0 \- 1.0] The width of the "minimum sized" frame.
+.SS "    " "    " min-height: [0.0 \- 1.0] The height of the "minimum sized" frame.
+.SS "    " --------------------
+.SS "    " if split/float == 's'
+.SS "    " "    " min-size: " " [0.0 \- 1.0] The width or height of the "minimum sized" split frame based on the min size of the root frame.
+.SS "    " --------------------
+.SS "    " speed: [int] The speed at which the animation will occur. This is in Hz.
+.SS --------------------
+.SS buff-arr: [""] A string of buffer names that are separated by a space. This is what links together a custom frame and the buffers.
 .SH VERSION
 0.0.1
 .SH KEYWORDS
