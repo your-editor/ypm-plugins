@@ -370,3 +370,6 @@
 [submodule "ypm_plugins/lang/syntax/bpftrace"]
 	path = ypm_plugins/lang/syntax/bpftrace
 	url = https://github.com/mickidymick/yed-lang-syntax-bpftrace.git
+[submodule "ypm_plugins/styles/alchemist"]
+	path = ypm_plugins/styles/alchemist
+	url = https://github.com/kammerdienerb/yed-style-alchemist
