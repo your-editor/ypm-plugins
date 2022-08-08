@@ -6,6 +6,9 @@ None
 .SH COMMANDS
 .SS fstyle [path]
 If path is provided, load the style from the file at path and activate it. Otherwise, use the path of the current buffer.
+.SS fstyle-export
+If the buffer in the active frame is an fstyle buffer, export the style as C code that can be compiled into a plugin.
+If the style is named, for example, "test.fstyle", the exported file will be called "test.c".
 .SH BUFFERS
 None
 .SH NOTES
@@ -15,30 +18,37 @@ When fstyle files are edited in yed with this plugin loaded, the buffer shows ea
 Here is an example of the syntax:
 
 .EX
-    active               fg C9BFB6    bg 170326
-    active-border        fg 7180AC    bg 170326
-    active-gutter        fg C9BFB6    bg 170326
-    inactive             fg C9BFB6    bg 170326
-    inactive-border      fg 7180AC    bg 170326
-    inactive-gutter      fg C9BFB6    bg 170326
-    cursor-line                       bg 393F46
-    selection                         bg 393F46
+    active               fg c9bfb6    bg 113537
+    active-border        fg 7180ac    bg 113537
+    active-gutter        fg c9bfb6    bg 113537
+    inactive             fg c9bfb6    bg 113537
+    inactive-border      fg 7180ac    bg 113537
+    inactive-gutter      fg c9bfb6    bg 113537
+    cursor-line                       bg 355070
+    selection                         bg 355070
     search               fg 49d45c    bg 170326    inverse
     search-cursor        fg d4495c    bg 170326    inverse
-    attention            fg AF0000                 bold
-    associate            fg 302346    bg 907AD6
-    status-line          fg 252730    bg 7180AC    bold
-    command-line         fg C9BFB6    bg 170326
-    code-comment         fg 555760                 bold
-    code-keyword         fg ED8E29
-    code-control-flow    fg ED8E29
-    code-typename        fg D90368
-    code-preprocessor    fg CFCFCF                 bold
-    code-fn-call         fg 8CBCd9
-    code-number          fg B5446E
-    code-constant        fg CFCFCF                 bold
-    code-string          fg 8AaE9F
-    code-character       fg 8AaE9F
+    attention            fg c00000                 bold
+    associate            fg c9bfb6    bg 900040
+    status-line          fg 252730    bg 7180ac    bold
+    command-line         fg c9bfb6    bg 113537
+    popup                fg c9bfb6    bg 900040
+    popup-alt            fg c9bfb6    bg 900040    inverse
+    good                 fg 009000
+    bad                  fg e00000
+    code-comment         fg 909090                 bold
+    code-keyword         fg 8bbeb2
+    code-control-flow    fg 8bbeb2
+    code-typename        fg f2af29
+    code-preprocessor    fg 6153cc                 bold
+    code-fn-call         fg 8cBcd9
+    code-number          fg e56b6f
+    code-constant        fg 6153cc                 bold
+    code-field           fg a99fc6
+    code-variable        fg a99fc6
+    code-string          fg dcccff
+    code-character       fg dcccff
+    code-escape          fg ef009f
 .EE
 
 When the style is loaded, the basename of its file will be used as the name.
