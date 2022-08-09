@@ -2,12 +2,104 @@
 .SH NAME
 terminal \- A terminal emulator in a yed buffer.
 .SH CONFIGURATION
-None
+.SS terminal-shell
+The child process to start. Defaults to the value of $SHELL.
+.SS terminal-termvar
+This determines what the value of $TERM is to child process.
+The default value is xterm-256color.
+It is not advised to change this unless you know what you're doing.
+.SS terminal-scrollback
+The number of lines to hold as available scrollback in the terminal buffer.
+The default value is 10000.
+.SS terminal-max-block-size
+The maximum number of bytes that can be read from the child process before forcing an update
+to the buffer.
+The default value is 16384.
+.SS terminal-auto-term-mode
+If this variable is truthy, term mode will be automatically turned back on when activating a frame with a terminal buffer in it.
+Defaults to ON.
+.SS terminal-show-welcome
+If this variable is truthy, the YED TERMINAL message will be printed when a new terminal starts.
+Defaults to yes.
+.SS terminal-debug-log
+If this variable is truthy, debug log messages will be printed about terminal state and control sequences.
+Defaults to OFF.
+.SS terminal-color0
+Attribute string to use for color0. Defaults to &black.
+.SS terminal-color1
+Attribute string to use for color1. Defaults to &red.
+.SS terminal-color2
+Attribute string to use for color2. Defaults to &green.
+.SS terminal-color3
+Attribute string to use for color3. Defaults to &yellow.
+.SS terminal-color4
+Attribute string to use for color4. Defaults to &blue.
+.SS terminal-color5
+Attribute string to use for color5. Defaults to &magenta.
+.SS terminal-color6
+Attribute string to use for color6. Defaults to &cyan.
+.SS terminal-color7
+Attribute string to use for color7. Defaults to &gray.
+.SS terminal-color8
+Attribute string to use for color8. Defaults to &gray.
+.SS terminal-color9
+Attribute string to use for color9. Defaults to &red.
+.SS terminal-color10
+Attribute string to use for color10. Defaults to &green.
+.SS terminal-color11
+Attribute string to use for color11. Defaults to &yellow.
+.SS terminal-color12
+Attribute string to use for color12. Defaults to &blue.
+.SS terminal-color13
+Attribute string to use for color13. Defaults to &magenta.
+.SS terminal-color14
+Attribute string to use for color14. Defaults to &cyan.
+.SS terminal-color15
+Attribute string to use for color15. Defaults to &white.
+.SS terminal-color-default
+Attribute string to use for deafult text. Defaults to &active.
 .SH COMMANDS
 .SS term-new
-Open a new terminal buffer.
+Open a new terminal buffer. New terminal buffers are named *term#, where # is a positive integer starting at 0.
+.SS term-open [#]
+Opens a terminal buffer and displays in a frame acquired by calling special-buffer-prepare-focus.
+If # is provided, use *term# (creating it if it doesn't exist).
+Otherwise, a new terminal is created.
+.SS term-open-no-frame [#]
+This command behaves the same as term-open, but does not call special-buffer-prepare-focus and instead uses the currently active frame.
+.SS toggle-term-mode
+Turn term mode ON/OFF for the current terminal buffer. See NOTES for information about term mode.
+.SS term-feed-keys BUFFER KEYS...
+Send each key in KEYS to the terminal buffer BUFFER.
+Example: term-feed-keys *term0 l s enter
+.SS term-bind KEY CMD ARGS...
+Bind KEY to execute CMD ARGS... when in a terminal and in term mode.
+.SS term-unbind KEY
+Remove terminal key binding for KEY.
 .SH NOTES
-None
+Notable Features:
+.TS
+tab(@);
+| c | c |
+| l | l |.
+_
+SUPPORTED@UNSUPPORTED
+_
+Truecolor@SGR Mouse Reporting
+Bracketed Paste Mode@Italic text
+OSC 52 pass-through@Sixel Graphics
+_
+.TE
+
+A terminal buffer in "term mode" behaves less like a yed buffer and more like a terminal.
+Keys presses go through the terminal's input handling and mostly bypass other yed/plugin functionality.
+If term mode is turned off via toggle-term-mode, the buffer behaves like a normal yed buffer that can
+be scrolled, yanked from, searched, and all the other nice things that you can do with yed buffers.
+Note, however, that the terminal buffers are read-only (only the terminal plugin modifies the buffers),
+because manipulating the contents otherwise would desynchronize the state of the terminal with the
+programs running in it.
+
+Key bindings are inserted into a new keymap called "terminal".
 .SH VERSION
 0.0.1
 .SH KEYWORDS
