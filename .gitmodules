@@ -373,3 +373,6 @@
 [submodule "ypm_plugins/styles/alchemist"]
 	path = ypm_plugins/styles/alchemist
 	url = https://github.com/kammerdienerb/yed-style-alchemist
+[submodule "ypm_plugins/extension_mapper"]
+	path = ypm_plugins/extension_mapper
+	url = https://github.com/kammerdienerb/yed-extension_mapper
