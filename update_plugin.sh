@@ -7,5 +7,4 @@ cwd=$(pwd)
 cd $plugin_name
 git checkout main || git checkout master
 git pull
-cd $cwd
-cp $plugin_name*.7 man/man7/
+cp $(basename ${plugin_name})*.7 ${cwd}/man/man7/
