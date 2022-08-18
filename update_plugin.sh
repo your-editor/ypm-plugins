@@ -1,6 +1,11 @@
 #!/usr/bin/env bash
 
-read -e -p "Directory to plugin you want to update:" plugin_name
+if [[ $# == "0" ]]; then
+    read -e -p "Directory to plugin you want to update:" plugin_name
+else
+    plugin_name=$1
+fi
+
 git submodule init $plugin_name
 git submodule update $plugin_name
 cwd=$(pwd)
