@@ -376,3 +376,9 @@
 [submodule "ypm_plugins/extension_mapper"]
 	path = ypm_plugins/extension_mapper
 	url = https://github.com/kammerdienerb/yed-extension_mapper
+[submodule "ypm_plugins/styles/pastel"]
+	path = ypm_plugins/styles/pastel
+	url = https://github.com/imml3457/pastel
+[submodule "ypm_plugins/styles/heather"]
+	path = ypm_plugins/styles/heather
+	url = https://github.com/imml3457/heather
