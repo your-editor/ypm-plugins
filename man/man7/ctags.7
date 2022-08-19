@@ -9,7 +9,7 @@ Specifies the flags to pass to ctags when running ctags-gen.
 .SS ctags-additional-paths [ path... ]
 A list of extra files/directories to produce tags for. This is useful if, for example, you want to include library header files.
 .SS ctags-fallback-autogen [ yes / no ]
-If this variable is true, temporary tags will be automatically generated if a tags file does not exist and you have not run ctags-gen yourself. The files in the current working directory and any open buffers will be used as the sources of the tags.
+If this variable is true, temporary tags will be automatically generated if a tags file does not exist and you have not run ctags-gen yourself. The files in the current working directory, any files in ./src, and any open buffers will be used as the sources of the tags.
 .SS ctags-regen-on-write [ yes / no ]
 If this variable is true, tags will be automatically regenerated when you write a buffer.
 .SS ctags-auto-show-function-hint [ yes / no ]
