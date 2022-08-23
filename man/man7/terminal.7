@@ -69,9 +69,18 @@ Otherwise, a new terminal is created.
 This command behaves the same as term-open, but does not call special-buffer-prepare-focus and instead uses the currently active frame.
 .SS toggle-term-mode
 Turn term mode ON/OFF for the current terminal buffer. See NOTES for information about term mode.
+.SS term-mode-off BUFFER
+Turn term mode OFF for the terminal buffer BUFFER.
+.SS term-mode-on BUFFER
+Turn term mode ON for the terminal buffer BUFFER.
 .SS term-feed-keys BUFFER KEYS...
 Send each key in KEYS to the terminal buffer BUFFER.
+
 Example: term-feed-keys *term0 l s enter
+.SS term-feed-text BUFFER TEXT
+Send each character in TEXT to the terminal buffer BUFFER.
+
+Example: term-feed-text *term0 "ls\\n"
 .SS term-bind KEY CMD ARGS...
 Bind KEY to execute CMD ARGS... when in a terminal and in term mode.
 .SS term-unbind KEY
