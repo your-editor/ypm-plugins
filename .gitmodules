@@ -382,3 +382,6 @@
 [submodule "ypm_plugins/styles/heather"]
 	path = ypm_plugins/styles/heather
 	url = https://github.com/imml3457/heather
+[submodule "ypm_plugins/bookmarks"]
+	path = ypm_plugins/bookmarks
+	url = https://github.com/mickidymick/bookmarks.git
