@@ -385,3 +385,6 @@
 [submodule "ypm_plugins/bookmarks"]
 	path = ypm_plugins/bookmarks
 	url = https://github.com/mickidymick/bookmarks.git
+[submodule "ypm_plugins/yule_2022"]
+	path = ypm_plugins/yule_2022
+	url = https://github.com/kammerdienerb/yed-yule_2022
