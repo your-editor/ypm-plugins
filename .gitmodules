@@ -388,3 +388,6 @@
 [submodule "ypm_plugins/yule_2022"]
 	path = ypm_plugins/yule_2022
 	url = https://github.com/kammerdienerb/yed-yule_2022
+[submodule "ypm_plugins/word_wrap"]
+	path = ypm_plugins/word_wrap
+	url = https://github.com/benbenolson/word_wrap.git
