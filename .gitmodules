@@ -391,3 +391,6 @@
 [submodule "ypm_plugins/word_wrap"]
 	path = ypm_plugins/word_wrap
 	url = https://github.com/benbenolson/word_wrap.git
+[submodule "ypm_plugins/lang/csharp"]
+	path = ypm_plugins/lang/csharp
+	url = https://github.com/kammerdienerb/yed-lang-csharp
