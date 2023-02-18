@@ -2,15 +2,17 @@
 .SH NAME
 comment \- Toggles commenting of lines of code.
 .SH CONFIGURATION
-.SS cpp-style-comments [ yes / no ]
-If this variable is true, single line C++ style comments will be used.
+.SS <FT>-style-comments "PREFIX [SUFFIX]"
+This plugin will look for variables of this pattern to decide how to comment different filetypes.
+For example, for C-comment-style "/* */", lines will be surrounded by the "/* " prefix and " */" suffix.
+Alternatively, C-comment-style "//", will simply prefix lines with "// ".
 .SH COMMANDS
 .SS comment-toggle
 Toggles the current line. If there is a selection, toggles every line in the selection.
 .SH BUFFERS
 None
 .SH NOTES
-Implemented filetypes are: C, C++, Config, Golang, Zig, Shell, bJou, Python, yedrc, LaTeX
+FT plugins should set the corresponding variables. However, users can also override these.
 .SH VERSION
 0.0.1
 .SH KEYWORDS
