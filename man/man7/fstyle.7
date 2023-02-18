@@ -4,11 +4,13 @@ fstyle \- Create and activate styles in plaintext.
 .SH CONFIGURATION
 None
 .SH COMMANDS
-.SS fstyle [path]
-If path is provided, load the style from the file at path and activate it. Otherwise, use the path of the current buffer.
+.SS fstyle [PATH]
+If PATH is provided, load the style from the file at PATH and activate it. Otherwise, use the PATH of the current buffer.
 .SS fstyle-export
 If the buffer in the active frame is an fstyle buffer, export the style as C code that can be compiled into a plugin.
 If the style is named, for example, "test.fstyle", the exported file will be called "test.c".
+.SS fstyle-from STYLE [PATH]
+Convert the style loaded with the name STYLE to an fstyle file at PATH if provided, otherwise at STYLE.fstyle.
 .SH BUFFERS
 None
 .SH NOTES
