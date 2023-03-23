@@ -403,3 +403,6 @@
 [submodule "ypm_plugins/lang/scheme"]
 	path = ypm_plugins/lang/scheme
 	url = https://github.com/kammerdienerb/yed-lang-scheme
+[submodule "ypm_plugins/lang/syntax/scheme"]
+	path = ypm_plugins/lang/syntax/scheme
+	url = https://github.com/kammerdienerb/yed-lang-syntax-scheme
