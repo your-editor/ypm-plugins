@@ -400,3 +400,6 @@
 [submodule "ypm_plugins/xul"]
 	path = ypm_plugins/xul
 	url = https://github.com/kammerdienerb/yed-xul
+[submodule "ypm_plugins/lang/scheme"]
+	path = ypm_plugins/lang/scheme
+	url = https://github.com/kammerdienerb/yed-lang-scheme
