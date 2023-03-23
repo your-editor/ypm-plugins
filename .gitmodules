@@ -397,3 +397,6 @@
 [submodule "ypm_plugins/lang/syntax/csharp"]
 	path = ypm_plugins/lang/syntax/csharp
 	url = git@github.com:kammerdienerb/yed-lang-syntax-csharp.git
+[submodule "ypm_plugins/xul"]
+	path = ypm_plugins/xul
+	url = https://github.com/kammerdienerb/yed-xul
