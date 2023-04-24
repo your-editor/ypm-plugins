@@ -409,3 +409,6 @@
 [submodule "ypm_plugins/lang/syntax/nickel"]
 	path = ypm_plugins/lang/syntax/nickel
 	url = https://github.com/kammerdienerb/yed-lang-syntax-nickel
+[submodule "ypm_plugins/lang/go"]
+	path = ypm_plugins/lang/go
+	url = https://github.com/kammerdienerb/yed-lang-go
