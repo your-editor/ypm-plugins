@@ -262,9 +262,6 @@
 [submodule "ypm_plugins/styles/midnight"]
 	path = ypm_plugins/styles/midnight
 	url = https://github.com/uniquepointer/yed-style-midnight
-[submodule "ypm_plugins/lang/go"]
-	path = ypm_plugins/lang/go
-	url = https://github.com/uniquepointer/yed-lang-go
 [submodule "ypm_plugins/lang/tools/gofmt"]
 	path = ypm_plugins/lang/tools/gofmt
 	url = https://github.com/uniquepointer/yed-lang-tools-gofmt
