@@ -415,3 +415,6 @@
 [submodule "ypm_plugins/lang/syntax/go"]
 	path = ypm_plugins/lang/syntax/go
 	url = https://github.com/kammerdienerb/yed-lang-syntax-go
+[submodule "ypm_plugins/whence_you_came"]
+	path = ypm_plugins/whence_you_came
+	url = https://github.com/kammerdienerb/yed-whence_you_came
