@@ -418,3 +418,6 @@
 [submodule "ypm_plugins/whence_you_came"]
 	path = ypm_plugins/whence_you_came
 	url = https://github.com/kammerdienerb/yed-whence_you_came
+[submodule "ypm_plugins/lang/jule"]
+	path = ypm_plugins/lang/jule
+	url = https://github.com/kammerdienerb/yed-lang-jule
