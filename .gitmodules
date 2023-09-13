@@ -424,3 +424,6 @@
 [submodule "ypm_plugins/lang/syntax/jule"]
 	path = ypm_plugins/lang/syntax/jule
 	url = https://github.com/kammerdienerb/yed-lang-syntax-jule
+[submodule "ypm_plugins/diff"]
+	path = ypm_plugins/diff
+	url = https://github.com/mickidymick/diff.git
