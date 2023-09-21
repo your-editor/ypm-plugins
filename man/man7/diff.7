@@ -2,10 +2,10 @@
 .SH NAME
 diff \- interactive diff for two buffers
 .SH CONFIGURATION
-.SS diff-multi-line-compare-algorithm "" [ "myers" / ("myers_linear") ]
+.SS diff-multi-line-compare-algorithm "" [ "myers" / "myers_linear" / ("patience")]
 sets the algorithm for comparing the file line by line
 
-.SS diff-line-compare-algorithm "      " [ ("myers") / "myers_linear" ]
+.SS diff-line-compare-algorithm "      " [ "myers" / "myers_linear" / ("patience")]
 sets the algorithm for comparing two like lines in the file
 
 .SS diff-insert-color "                " [ &active &blue swap ]
@@ -26,7 +26,7 @@ sets the background color two lines that are close to the same
 .SS diff-inner-compare-char-color "    " [ &active &attention swap ]
 sets the background color for the characters that are inserted/deleted in the lines that are close (inner-compare)
 
-.SS diff-truncate-lines "              " [ yes / no ]
+.SS diff-truncate-lines "              " [ (yes) / no ]
 if you want to truncate lines that are the same between both files
 
 .SS diff-truncate-lines-min-num "      " [ 12 ]
@@ -42,7 +42,7 @@ the color of the added line showing the number of lines that has been truncated 
 .SS diff:buffer2 -- a buffer used by diff so that the origianl is not mutated
 .SH NOTES
 .SS If you want to run this command from the terminal insert this into you .bashrc
-.SS function yeddiff { yed -c "diff $1 $2"; }
+.SS function yeddiff { yed -c \/"diff $1 $2\/"; }
 .SH VERSION
 0.0.1
 .SH KEYWORDS
