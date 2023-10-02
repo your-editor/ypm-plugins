@@ -1,0 +1,26 @@
+.TH YED-LSP_DIAGNOSTICS 7 "YED Plugin Manuals" "" "YED Plugin Manuals"
+.SH NAME
+lsp_diagnostics \- Error reporting/linting via language servers.
+.SH CONFIGURATION
+.SS lsp-diagnostics-show-message [ never, cursor, or always ]
+When to show diagnostic messages next the the offending line(s).
+
+"never": Never show the diagnostics in the frame.
+
+"cursor": Show messages when the cursor is within the offending region.
+
+"always": Always show messages.
+
+Defaults to "always".
+.SH COMMANDS
+None
+.SH BUFFERS
+.SS
+*lsp-diagnostics
+A jumpable list of locations with a corresponding diagnostic.
+.SH NOTES
+Requires an LSP controller plugin.
+.SH VERSION
+0.0.1
+.SH KEYWORDS
+lsp,LSP,language,server,protocol,lint,error,analyzer,check,problems

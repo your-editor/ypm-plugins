@@ -1,0 +1,24 @@
+.TH YED-LSP_INFO_POPUP 7 "YED Plugin Manuals" "" "YED Plugin Manuals"
+.SH NAME
+lsp_info_popup \- LSP-provided information about a source location in a popup.
+.SH CONFIGURATION
+.SS lsp-info-popup-idle-threshold-ms MILLISECONDS
+Automatically popup information after the cursor has been idle for MILLISECONDS.
+
+< 0: Never automatically show the popup.
+
+0: Always show the popup.
+
+> 0: Show the popup after the cursor has been idle for this amount of time.
+
+Defaults to 1500 (1.5 seconds).
+.SH COMMANDS
+.SS
+lsp-info
+Summon the popup for the current location (cursor).
+.SH NOTES
+Requires an LSP controller plugin.
+.SH VERSION
+0.0.1
+.SH KEYWORDS
+lsp,LSP,language,server,protocol,info,popup,hover,help

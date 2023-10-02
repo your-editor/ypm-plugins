@@ -427,3 +427,12 @@
 [submodule "ypm_plugins/diff"]
 	path = ypm_plugins/diff
 	url = https://github.com/mickidymick/diff.git
+[submodule "ypm_plugins/lsp"]
+	path = ypm_plugins/lsp
+	url = https://github.com/kammerdienerb/yed-lsp
+[submodule "ypm_plugins/lsp_diagnostics"]
+	path = ypm_plugins/lsp_diagnostics
+	url = https://github.com/kammerdienerb/yed-lsp_diagnostics
+[submodule "ypm_plugins/lsp_info_popup"]
+	path = ypm_plugins/lsp_info_popup
+	url = https://github.com/kammerdienerb/yed-lsp_info_popup

@@ -1,0 +1,47 @@
+.TH YED-LSP 7 "YED Plugin Manuals" "" "YED Plugin Manuals"
+.SH NAME
+lsp \- Language Server Protocol client infrastructure plugin.
+.SH CONFIGURATION
+.SS lsp-debug-log [ON/OFF]
+Whether or not to log debug messages. Defaults to "OFF".
+.SH COMMANDS
+.SS lsp-define-server NAME CMD FT...
+Define a server configuration named NAME.
+The server will be started by running CMD.
+Files matching any of those in FT will be managed by this server connection.
+Example, using ccls for C and C++ buffers:
+
+.EX
+    lsp-define-server CCLS ccls C C++
+.EE
+.SH NOTES
+.SS For users:
+.P
+This plugin (or an alternative LSP controller plugin) is required for LSP-based feature plugins to function.
+This plugin does not provide features such as completion, jump to definition, etc.
+.SS For LSP feature plugin authors:
+.P
+This plugin makes use of EVENT_PLUGIN_MESSAGE to communicate on behalf of LSP feature plugins to and from the language server.
+When the server sends a notification, they will be broadcast with event->plugin_message.plugin_id of "lsp" and
+a event->plugin_message.message_id corresponding to the LSP method received from the server.
+
+If your feature plugin would like to make a request to the server and get the response back, you may send an EVENT_PLUGIN_MESSAGE
+with a event->plugin_message.message_id of "lsp-request:METHOD" where METHOD is the server method defined by LSP.
+This plugin will respond in another EVENT_PLUGIN_MESSAGE with event->plugin_message.plugin_id of "lsp" and the corresponding
+method in event->plugin_message.message_id. Example flow:
+
+.EX
+    your plugin     -> EVENT_PLUGIN_MESSAGE{ plugin_id: "lsp_info_popup", message_id: "lsp-request:textDocument/hover" } -> this plugin
+    this plugin     -> JSON request                                                                                      -> language server
+    language server -> JSON response                                                                                     -> this plugin
+    this plugin     -> EVENT_PLUGIN_MESSAGE{ plugin_id: "lsp", message_id: "textDocument/hover" }                        -> broadcast
+.EE
+
+The response from the server will be in found as a JSON string in event->plugin_message.string_data.
+In most cases, you should cancel the event with the response corresponding to the request you made.
+Otherwise, another plugin may recieve that event and duplicate behavior (this may be desired).
+
+.SH VERSION
+0.0.1
+.SH KEYWORDS
+lsp,LSP,language,server,protocol,client,controller,vscode
