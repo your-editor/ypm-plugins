@@ -436,3 +436,6 @@
 [submodule "ypm_plugins/lsp_info_popup"]
 	path = ypm_plugins/lsp_info_popup
 	url = https://github.com/kammerdienerb/yed-lsp_info_popup
+[submodule "ypm_plugins/lang/simon"]
+	path = ypm_plugins/lang/simon
+	url = https://github.com/kammerdienerb/yed-lang-simon
