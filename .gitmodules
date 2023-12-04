@@ -439,3 +439,6 @@
 [submodule "ypm_plugins/lang/simon"]
 	path = ypm_plugins/lang/simon
 	url = https://github.com/kammerdienerb/yed-lang-simon
+[submodule "ypm_plugins/lang/syntax/simon"]
+	path = ypm_plugins/lang/syntax/simon
+	url = https://github.com/kammerdienerb/yed-lang-syntax-simon
