@@ -1,8 +1,9 @@
 .TH YED-BOOKMARKS 7 "YED Plugin Manuals" "" "YED Plugin Manuals"
 .SH NAME
-bookmarks \- lets you bookmark lines of code to return to later.
+bookmarks \- lets you bookmark lines of code to return to later. DO NOT use the line_numbers plugin along side this one.
 .SH CONFIGURATION
 .SS bookmark-character: the character that shows if there is a bookmark on the line.
+.SS bookmark-use-line-numbers: [0/1] turn off or on line numbers
 .SH COMMANDS
 .SS set-bookmark: [int row] sets a new bookmark at the row given as an argument.
 .SS remove-bookmark: [int row] removes the bookmark at the row given as an argument.
@@ -21,4 +22,4 @@ bookmarks \- lets you bookmark lines of code to return to later.
 .SH VERSION
 0.0.1
 .SH KEYWORDS
-bookmarks, keywords
+bookmarks, line_numbers
