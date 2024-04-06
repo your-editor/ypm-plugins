@@ -442,3 +442,6 @@
 [submodule "ypm_plugins/lang/syntax/simon"]
 	path = ypm_plugins/lang/syntax/simon
 	url = https://github.com/kammerdienerb/yed-lang-syntax-simon
+[submodule "ypm_plugins/lsp_symbol_buffer"]
+	path = ypm_plugins/lsp_symbol_buffer
+	url = https://github.com/mickidymick/lsp_symbol_buffer.git
