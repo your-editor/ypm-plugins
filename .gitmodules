@@ -448,3 +448,6 @@
 [submodule "ypm_plugins/word_wrap"]
 	path = ypm_plugins/word_wrap
 	url = https://github.com/matthew-olson-intel/word_wrap
+[submodule "ypm_plugins/lang/julie"]
+	path = ypm_plugins/lang/julie
+	url = https://github.com/kammerdienerb/yed-lang-julie
