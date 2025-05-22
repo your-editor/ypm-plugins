@@ -451,3 +451,6 @@
 [submodule "ypm_plugins/lang/julie"]
 	path = ypm_plugins/lang/julie
 	url = https://github.com/kammerdienerb/yed-lang-julie
+[submodule "ypm_plugins/lang/syntax/julie"]
+	path = ypm_plugins/lang/syntax/julie
+	url = https://github.com/kammerdienerb/yed-lang-syntax-julie
