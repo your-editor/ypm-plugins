@@ -1,0 +1,18 @@
+.TH YED-JULIE 7 "YED Plugin Manuals" "" "YED Plugin Manuals"
+.SH NAME
+julie \- Interactive editing/execution of the Julie programming language.
+.SH CONFIGURATION
+.SS julie-interactive-file <path>
+Path to the file that this plugin will watch for edits.
+Default value is '<your yed config path>/julie.j'.
+.SS julie-live-update <yes/no>
+If truthy, this plugin will watch for edits to julie-interactive-file and
+attempt to execute the script after a short period of inactivity (500 ms).
+Otherwise, the script will be executed on buffer-write.
+
+.SH BUFFERS
+*julie-output
+.SH VERSION
+0.0.1
+.SH KEYWORDS
+execute, compile, run, script, julie, Julie, lisp, LISP, interactive
