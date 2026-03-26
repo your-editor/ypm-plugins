@@ -2,30 +2,82 @@
 .SH NAME
 tree_view \- A buffer that shows a tree view of all files.
 .SH CONFIGURATION
-.SS tree-view-update-period: number of seconds between updates defualt is 5seconds.
-.SS tree-view-hidden-items: space separated string of substrings to
-keep from appearing in the tree_view.
-.SS tree-view-image-extensions: space separated string of extra extensions to
-check for when determining if a file is an image file or not.
-.SS tree-view-archive-extensions: space separated string of extra extensions to
-check for when determining if a file is an archive file or not.
-.SS tree-view-child-char-l: character of l shape in tree_view, default is "└".
-.SS tree-view-child-char-i: character of i shape in tree_view, default is "│".
-.SS tree-view-child-char-t: character of t shape in tree_view, default is "├".
-.SS tree-view-directory-color: attribute string for coloring directories.
-.SS tree-view-exec-color: attribute string for coloring executables.
-.SS tree-view-symbolic-link-color: attribute string for coloring symbolic links.
-.SS tree-view-device-color: attribute string for coloring devices.
-.SS tree-view-graphic-image-color: attribute string for coloring graphic images.
-.SS tree-view-archive-color: attribute string for coloring archive files.
-.SS tree-view-broken-link-color: attribute string for coloring broken links.
+.SS tree-view-update-period
+Number of seconds between automatic filesystem refresh. Default is 5.
+.SS tree-view-hidden-items
+Space-separated list of substrings. Any file or directory whose name contains
+one of these substrings will be hidden from the tree view.
+.SS tree-view-image-extensions
+Space-separated list of additional file extensions to treat as image files,
+supplementing the built-in list. Example: ".raw .nef"
+.SS tree-view-archive-extensions
+Space-separated list of additional file extensions to treat as archive files,
+supplementing the built-in list. Example: ".squashfs .zst"
+.SS tree-view-child-char-l
+Character used for the corner connector in the tree, default is "\[u2514]" (└).
+.SS tree-view-child-char-i
+Character used for the vertical line in the tree, default is "\[u2502]" (│).
+.SS tree-view-child-char-t
+Character used for the branch connector in the tree, default is "\[u251C]" (├).
+.SS tree-view-directory-color
+Attribute string for coloring directories. Default is "&blue".
+.SS tree-view-exec-color
+Attribute string for coloring executable files. Default is "&green".
+.SS tree-view-symbolic-link-color
+Attribute string for coloring symbolic links. Default is "&cyan".
+.SS tree-view-device-color
+Attribute string for coloring device files. Default is "&black swap &yellow.fg".
+.SS tree-view-graphic-image-color
+Attribute string for coloring image files. Default is "&magenta".
+.SS tree-view-archive-color
+Attribute string for coloring archive files. Default is "&red".
+.SS tree-view-broken-link-color
+Attribute string for coloring broken symbolic links. Default is "&black swap &red.fg".
 .SH COMMANDS
-.SS tree-view: opens the tree-view-list buffer.
+.SS tree-view
+Opens the
+.I *tree-view-list
+buffer. If the tree has not been built yet it will be initialized first.
+Press
+.B Enter
+on a directory to expand or collapse it. Press
+.B Enter
+on a file to open it in the editor.
+.SH PREVIEW
+When the cursor is on a file in
+.I *tree-view-list,
+a preview of that file is shown in a split pane to the right. Only as many
+lines as fit in the preview frame are read from the file; large files are
+never fully loaded. The preview buffer is read-only and is not tracked as a
+normal file.
+.P
+Moving the cursor to a directory or any non-regular entry closes the preview
+pane automatically.
 .SH BUFFERS
 .SS *tree-view-list
+The interactive file tree. Read-only; modified internally by the plugin.
+.SS *tree-view-preview*
+Ephemeral preview buffer. Populated on demand when hovering over a file and
+cleared when the cursor leaves the file. Should not be written to directly.
+.SH FILE TYPE DETECTION
+Files are classified in the following priority order:
+.IP 1.
+Directory
+.IP 2.
+Symbolic link (valid or broken)
+.IP 3.
+Device file (block or character)
+.IP 4.
+Executable (owner execute bit set)
+.IP 5.
+Archive (by extension)
+.IP 6.
+Image (by extension)
+.IP 7.
+Regular file
 .SH NOTES
-None
+Extension matching is case-insensitive and anchored to the end of the filename.
 .SH VERSION
-0.0.1
+0.0.2
 .SH KEYWORDS
-tree_view, special, buffers
+tree_view, special, buffers, preview

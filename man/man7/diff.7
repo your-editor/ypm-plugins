@@ -2,16 +2,16 @@
 .SH NAME
 diff \- interactive diff for two buffers
 .SH CONFIGURATION
-.SS diff-multi-line-compare-algorithm "         " [ "myers" / "myers_linear" / ("patience")]
+.SS diff-multi-line-compare-algorithm "         " [ "myers" / "myers_linear" / "patience" / ("histogram")]
 sets the algorithm for comparing the file line by line
 
-.SS diff-line-compare-algorithm "               " [ "myers" / "myers_linear" / ("patience")]
+.SS diff-line-compare-algorithm "               " [ "myers" / "myers_linear" / "patience" / ("histogram")]
 sets the algorithm for comparing two like lines in the file
 
 .SS diff-min-lines-big-file "                   " [ 5000 ]
-sets the min number of lines that dictates when the algorithm-bi-file is used instead
+sets the min number of lines that dictates when the algorithm-big-file is used instead
 
-.SS diff-multi-line-compare-algorithm-big-file "" [ "myers" / ("myers_linear") / "patience"]
+.SS diff-multi-line-compare-algorithm-big-file "" [ "myers" / "myers_linear" / "patience" / ("histogram")]
 sets the algorithm for comparing the file line by line when a big file is used
 
 .SS diff-insert-color "                         " [ &active &blue swap ]
@@ -30,7 +30,7 @@ sets the background color for the inserted dashed line opposite a delete
 sets the background color two lines that are close to the same
 
 .SS diff-inner-compare-char-color "             " [ &active &attention swap ]
-sets the background color for then characters that are inserted/deleted in the lines that are close (inner-compare)
+sets the background color for the characters that are inserted/deleted in the lines that are close (inner-compare)
 
 .SS diff-truncate-lines "                       " [ (yes) / no ]
 if you want to truncate lines that are the same between both files
@@ -38,7 +38,7 @@ if you want to truncate lines that are the same between both files
 .SS diff-truncate-lines-min-num "               " [ 12 ]
 the minimum number of lines that need to be the same contiguously before truncation starts
 
-.SS diff-truncate-color "                       " [ &active &cyan ]
+.SS diff-trunc-color "                          " [ &active &cyan ]
 the color of the added line showing the number of lines that has been truncated in this section
 
 .SH COMMANDS
@@ -46,10 +46,10 @@ the color of the added line showing the number of lines that has been truncated 
 .SS diff-expand-truncated-lines expands truncated section
 .SS diff-contract-truncated-lines contracts truncated section
 .SH BUFFERS
-.SS diff:buffer1 -- a buffer used by diff so that the original is not mutated
-.SS diff:buffer2 -- a buffer used by diff so that the origianl is not mutated
+.SS *diff:buffer1 -- a buffer used by diff so that the original is not mutated
+.SS *diff:buffer2 -- a buffer used by diff so that the original is not mutated
 .SH NOTES
-.SS If you want to run this command from the terminal insert this into you .bashrc
+.SS If you want to run this command from the terminal insert this into your .bashrc
 .SS function yeddiff { yed -c \/"diff $1 $2\/"; }
 .SH VERSION
 0.0.1

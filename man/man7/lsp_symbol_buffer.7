@@ -1,0 +1,29 @@
+.TH YED-lsp-symbol-buffer 7 "YED Plugin Manuals" "" "YED Plugin Manuals"
+.SH NAME
+lsp-symbol-buffer \- interactive buffer for getting declaration, definitions, and references of a function
+.SH CONFIGURATION
+.SS lsp-symbol-menu-function-color [ &magenta ]
+the color for functions in the menu
+.SS lsp-symbol-menu-symbol-color [ &red swap ]
+the color for symbols in the menu
+.SS lsp-symbol-menu-declaration-color [ &gray swap ]
+the color for declarations in the menu
+.SS lsp-symbol-menu-definition-color [ &gray swap ]
+the color for definitions in the menu
+.SS lsp-symbol-menu-reference-color [ &gray swap ]
+the color for references in the menu
+.SH COMMANDS
+.SS lsp-search-symbol runs a search on the current symbol
+.SS lsp-goto-declaration goes to the declaraion of the symbol
+.SS lsp-goto-definition goes to the definition of the symbol
+.SS lsp-find-references finds all the references of the symbol
+.SS lsp-goto-next-reference goes to the next reference of the symbol
+.SS lsp-goto-prev-reference goes to the prev reference of the symbol
+.SH BUFFERS
+.SS symbol-menu -- a buffer used by the lsp-symbol-menu
+.SH NOTES
+.SS To use this you can put your cursor over the function and run the lsp-search-symbol
+.SH VERSION
+0.0.1
+.SH KEYWORDS
+lsp, menu, definition, declaration, references, symbol
