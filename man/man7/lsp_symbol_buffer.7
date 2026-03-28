@@ -1,29 +1,65 @@
 .TH YED-lsp-symbol-buffer 7 "YED Plugin Manuals" "" "YED Plugin Manuals"
 .SH NAME
-lsp-symbol-buffer \- interactive buffer for getting declaration, definitions, and references of a function
+lsp-symbol-buffer \- interactive buffer for viewing declaration, definition, and references of a symbol
 .SH CONFIGURATION
 .SS lsp-symbol-menu-function-color [ &magenta ]
-the color for functions in the menu
+The color for functions in the menu.
 .SS lsp-symbol-menu-symbol-color [ &red swap ]
-the color for symbols in the menu
+The color for symbols in the menu.
 .SS lsp-symbol-menu-declaration-color [ &gray swap ]
-the color for declarations in the menu
+The color for declarations in the menu.
 .SS lsp-symbol-menu-definition-color [ &gray swap ]
-the color for definitions in the menu
+The color for definitions in the menu.
 .SS lsp-symbol-menu-reference-color [ &gray swap ]
-the color for references in the menu
+The color for references in the menu.
 .SH COMMANDS
-.SS lsp-search-symbol runs a search on the current symbol
-.SS lsp-goto-declaration goes to the declaraion of the symbol
-.SS lsp-goto-definition goes to the definition of the symbol
-.SS lsp-find-references finds all the references of the symbol
-.SS lsp-goto-next-reference goes to the next reference of the symbol
-.SS lsp-goto-prev-reference goes to the prev reference of the symbol
+.SS lsp-search-symbol
+Place the cursor over a symbol and run this command.
+Queries the LSP server for the declaration, definition, and all references of the symbol under the cursor.
+Results are displayed in the *symbol-menu buffer.
+Hitting ENTER on a result line jumps to that location.
+.SS lsp-search-txt <name>
+Search for a symbol by name rather than by cursor position.
+Sends a workspace/symbol query to the LSP server, populates the definition directly from the result, then queries for declaration and references.
+Results are displayed in the *symbol-menu buffer.
+Tab completion is available and draws from LSP symbol names and words in the current buffer.
+.SS lsp-find-symbol
+Opens an interactive search interface in the *lsp-find-symbol buffer.
+Type characters to filter the list of known symbols and buffer words.
+Only symbols whose names begin with the typed prefix are shown, sorted alphabetically.
+Hitting ENTER sends the typed text to lsp-search-txt.
+Hitting ESC or Ctrl-C cancels and closes the buffer.
+.SS lsp-goto-declaration
+Navigate directly to the declaration of the symbol under the cursor.
+.SS lsp-goto-definition
+Navigate directly to the definition of the symbol under the cursor.
+.SS lsp-find-references
+Find all references of the symbol under the cursor and populate *symbol-menu.
+.SS lsp-goto-next-reference
+After running lsp-find-references, jump to the next reference in the cycle.
+.SS lsp-goto-prev-reference
+After running lsp-find-references, jump to the previous reference in the cycle.
 .SH BUFFERS
-.SS symbol-menu -- a buffer used by the lsp-symbol-menu
+.SS *symbol-menu
+Displays the declaration, definition, and references for the most recently searched symbol.
+Layout: rows 6-7 = Declaration, rows 9-10 = Definition, rows 12+ = References.
+Hitting ENTER on a result line jumps to that location.
+.SS *lsp-find-symbol
+Interactive search buffer used by lsp-find-symbol.
+Shows up to 50 matching symbol names as you type, sorted alphabetically.
 .SH NOTES
-.SS To use this you can put your cursor over the function and run the lsp-search-symbol
+.P
+This plugin requires the yed-lsp plugin to be loaded and an LSP server to be configured for the current file type.
+Use lsp-define-server to configure an LSP server.
+.P
+For C and C++ files, clangd with --background-index is recommended.
+A compile_commands.json file in the project root is required for clangd to index the project.
+Use bear -- make (or cmake with -DCMAKE_EXPORT_COMPILE_COMMANDS=1) to generate it.
+.P
+lsp-search-txt and lsp-find-symbol query workspace/symbol to locate symbols by name.
+The definition is populated directly from the workspace/symbol result.
+Declaration and references are queried separately and may be empty if the LSP server has not fully indexed the project.
 .SH VERSION
-0.0.1
+0.0.2
 .SH KEYWORDS
-lsp, menu, definition, declaration, references, symbol
+lsp, menu, definition, declaration, references, symbol, search
