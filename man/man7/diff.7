@@ -41,6 +41,27 @@ the minimum number of lines that need to be the same contiguously before truncat
 .SS diff-trunc-color "                          " [ &active &cyan ]
 the color of the added line showing the number of lines that has been truncated in this section
 
+.SS diff-post-del-before-ins "                 " [ (yes) / no ]
+reorder adjacent INS/DEL entries so all DELs come before INS within each change block
+
+.SS diff-post-slide-down "                     " [ (yes) / no ]
+slide ambiguous edits downward within runs of identical lines
+
+.SS diff-post-indent-heuristic "               " [ (yes) / no ]
+shift hunk boundaries to land on the least-indented line (blank lines, closing braces)
+
+.SS diff-post-blank-line-gravity "             " [ (yes) / no ]
+prefer hunk boundaries that land on blank lines
+
+.SS diff-post-hunk-coalescence "               " [ (yes) / no ]
+merge change blocks separated by a small number of equal lines into a single block
+
+.SS diff-post-hunk-coalescence-max-gap "       " [ 3 ]
+maximum number of equal lines between two change blocks before they are merged
+
+.SS diff-post-semantic-cleanup "               " [ (yes) / no ]
+merge change blocks when the equal gap between them is shorter than the smaller block
+
 .SH COMMANDS
 .SS diff(buffer1, buffer2) interactive diff for two buffers
 .SS diff-expand-truncated-lines expands truncated section
