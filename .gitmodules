@@ -457,3 +457,6 @@
 [submodule "ypm_plugins/lang/man"]
 	path = ypm_plugins/lang/man
 	url = https://github.com/mickidymick/yed-lang-man.git
+[submodule "ypm_plugins/lang/syntax/man"]
+	path = ypm_plugins/lang/syntax/man
+	url = https://github.com/mickidymick/yed-lang-syntax-man.git
