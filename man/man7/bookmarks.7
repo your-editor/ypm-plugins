@@ -1,24 +1,69 @@
-.TH YED-BOOKMARKS 7 "YED Plugin Manuals" "" "YED Plugin Manuals"
+.TH YED-bookmarks 7 "YED Plugin Manuals" "" "YED Plugin Manuals"
 .SH NAME
-bookmarks \- lets you bookmark lines of code to return to later. DO NOT use the line_numbers plugin along side this one.
+bookmarks \- bookmark lines of code to return to later
 .SH CONFIGURATION
-.SS bookmark-character: the character that shows if there is a bookmark on the line.
-.SS bookmark-use-line-numbers: [0/1] turn off or on line numbers
+.SS bookmark-character "                       " [ ▓ ]
+the character displayed in the gutter to indicate a bookmark
+
+.SS bookmark-use-line-numbers "                " [ (0) / 1 ]
+enable or disable line numbers in the gutter
+
+.SS bookmark-color "                           " [ &blue ]
+the color used for the bookmark indicator in the gutter
+
+.SS bookmark-path-color "                      " [ &green ]
+the color used for file paths in the bookmarks list buffer
+
+.SS bookmark-row-color "                       " [ &purple ]
+the color used for row numbers in the bookmarks list buffer
+
+.SS bookmark-line-color "                      " [ &gray ]
+the color used for line contents in the bookmarks list buffer
+
+.SS bookmark-update-period "                   " [ 5 ]
+how often (in seconds) the bookmarks list buffer refreshes
+
+.SS bookmarks-file "                           " [ unset ]
+path (relative to cwd) to the file used for persisting bookmarks
+
+.SS bookmark-highlight-line "                  " [ (0) / 1 ]
+enable or disable highlighting the entire bookmarked line
+
+.SS bookmark-highlight-line-color "            " [ &blue swap ]
+the color used for highlighting bookmarked lines
+
+.SS line-number-scomp "                        " [ code-comment ]
+style component used for line numbers
+
 .SH COMMANDS
-.SS set-bookmark: [int row] sets a new bookmark at the row given as an argument.
-.SS remove-bookmark: [int row] removes the bookmark at the row given as an argument.
-.SS set-bookmark-on-line: sets a new bookmark at the current row.
-.SS remove-bookmark-on-line: removes the bookmark at the current row.
-.SS remove-all-bookmarks-in-buffer: removes all the bookmarks in the current buffer.
-.SS goto-next-bookmark: moves the cursor to the next bookmarked line.
-.SS goto-prev-bookmark: moves the cursor to the previous bookmarked line.
-.SS goto-next-bookmark-in-buffer: moves the cursor to the next bookmarked line in the buffer.
-.SS goto-prev-bookmark-in-buffer: moves the cursor to the previous bookmarked line in the buffer.
-.SS bookmarks: opens the bookmarks special buffer.
+.SS set-bookmark(row)
+set a new bookmark at the given row
+.SS remove-bookmark(row)
+remove the bookmark at the given row
+.SS set-bookmark-on-line
+set a new bookmark at the current cursor line
+.SS remove-bookmark-on-line
+remove the bookmark at the current cursor line
+.SS toggle-bookmark-on-line
+toggle a bookmark at the current cursor line
+.SS remove-all-bookmarks-in-buffer
+remove all bookmarks in the current buffer
+.SS remove-all-bookmarks
+remove all bookmarks across all buffers
+.SS goto-next-bookmark
+move the cursor to the next bookmark across all buffers
+.SS goto-prev-bookmark
+move the cursor to the previous bookmark across all buffers
+.SS goto-next-bookmark-in-buffer
+move the cursor to the next bookmark in the current buffer
+.SS goto-prev-bookmark-in-buffer
+move the cursor to the previous bookmark in the current buffer
+.SS bookmarks
+open the *bookmarks-list special buffer
 .SH BUFFERS
-.SS *bookmarks-list
+.SS *bookmarks-list -- a read-only buffer listing all bookmarks, press Enter to jump to a bookmark
 .SH NOTES
-.P None
+.SS Bookmarks pointing past the end of a file are automatically removed when the file is loaded.
 .SH VERSION
 0.0.1
 .SH KEYWORDS
