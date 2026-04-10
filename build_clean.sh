@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 #
-# clean_builds.sh — Remove test_builds artifacts and built plugin files.
+# build_clean.sh — Remove build_check artifacts and built plugin files.
 #
 
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
-WORK_DIR="$SCRIPT_DIR/.test_builds"
+WORK_DIR="$SCRIPT_DIR/.build_check"
 PLUGINS_DIR="$SCRIPT_DIR/ypm_plugins"
 
 RED='\033[0;31m'
@@ -16,10 +16,10 @@ echo ""
 
 # Remove the yed build directory
 if [ -d "$WORK_DIR" ]; then
-    echo -e "  ${RED}removing${RESET} .test_builds/"
+    echo -e "  ${RED}removing${RESET} .build_check/"
     rm -rf "$WORK_DIR"
 else
-    echo -e "  ${DIM}.test_builds/ not found${RESET}"
+    echo -e "  ${DIM}.build_check/ not found${RESET}"
 fi
 
 # Remove .so files from plugin directories

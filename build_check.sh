@@ -1,17 +1,17 @@
 #!/usr/bin/env bash
 #
-# test_builds.sh — Build-test all ypm plugins against a yed version.
+# build_check.sh — Build-test all ypm plugins against a yed version.
 #
 # Usage:
-#   ./test_builds.sh [branch]
+#   ./build_check.sh [branch]
 #
 # Examples:
-#   ./test_builds.sh              # defaults to dev
-#   ./test_builds.sh master       # yed master + ypm v1600
-#   ./test_builds.sh dev          # yed dev + ypm v1700
+#   ./build_check.sh              # defaults to dev
+#   ./build_check.sh master       # yed master + ypm v1600
+#   ./build_check.sh dev          # yed dev + ypm v1700
 #
 # The script will:
-#   1. Clone and build yed locally (into .test_builds/yed)
+#   1. Clone and build yed locally (into .build_check/yed)
 #   2. Checkout the matching ypm-plugins branch
 #   3. Init/update all submodules
 #   4. Try to build each plugin using that yed
@@ -43,7 +43,7 @@ else
 fi
 YED_REPO="https://github.com/kammerdienerb/yed.git"
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
-WORK_DIR="$SCRIPT_DIR/.test_builds"
+WORK_DIR="$SCRIPT_DIR/.build_check"
 YED_DIR="$WORK_DIR/yed"
 YED_INSTALL="$WORK_DIR/yed_install"
 PLUGINS_DIR="$SCRIPT_DIR/ypm_plugins"
