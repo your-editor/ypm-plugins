@@ -187,7 +187,20 @@ count_plugins() {
         [ "$n" = "lang" ] || [ "$n" = "styles" ] && continue
         ((count++))
     done
-    for d in "$PLUGINS_DIR"/lang/*/ "$PLUGINS_DIR"/styles/*/; do
+    for d in "$PLUGINS_DIR"/lang/*/; do
+        [ -d "$d" ] || continue
+        local n="$(basename "$d")"
+        # lang/syntax and lang/tools contain nested plugins — count their children
+        if [ "$n" = "syntax" ] || [ "$n" = "tools" ]; then
+            for nested in "$d"*/; do
+                [ -d "$nested" ] || continue
+                ((count++))
+            done
+        else
+            ((count++))
+        fi
+    done
+    for d in "$PLUGINS_DIR"/styles/*/; do
         [ -d "$d" ] || continue
         ((count++))
     done
@@ -213,13 +226,24 @@ build_all_plugins() {
     done
 
     # Nested plugins (lang/*, styles/*)
-    for subdir in "$PLUGINS_DIR"/lang/*/ "$PLUGINS_DIR"/styles/*/; do
+    for subdir in "$PLUGINS_DIR"/lang/*/; do
         [ -d "$subdir" ] || continue
-        local parent
-        parent="$(basename "$(dirname "$subdir")")"
-        local name
-        name="$parent/$(basename "$subdir")"
-        build_plugin "$name" "$subdir"
+        local base
+        base="$(basename "$subdir")"
+        # lang/syntax and lang/tools contain nested plugins — descend one more level
+        if [ "$base" = "syntax" ] || [ "$base" = "tools" ]; then
+            for nested in "$subdir"*/; do
+                [ -d "$nested" ] || continue
+                local name="lang/$base/$(basename "$nested")"
+                build_plugin "$name" "$nested"
+            done
+        else
+            build_plugin "lang/$base" "$subdir"
+        fi
+    done
+    for subdir in "$PLUGINS_DIR"/styles/*/; do
+        [ -d "$subdir" ] || continue
+        build_plugin "styles/$(basename "$subdir")" "$subdir"
     done
 
     # Clear the progress bar
