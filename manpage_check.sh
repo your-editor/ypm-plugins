@@ -60,20 +60,13 @@ progress_bar() {
 clear_line() { echo -ne "\r\033[K" >&2; }
 
 ensure_submodules() {
-    local any=0
-    for d in "$PLUGINS_DIR"/*/; do
-        [ -d "$d" ] || continue
-        local n
-        n="$(basename "$d")"
-        if [ "$n" = "lang" ] || [ "$n" = "styles" ]; then continue; fi
-        if [ -n "$(ls -A "$d" 2>/dev/null)" ]; then
-            any=1
-            break
-        fi
-    done
-    if [ "$any" -eq 0 ]; then
+    cd "$SCRIPT_DIR"
+    # git submodule status prefixes uninitialized entries with '-'.
+    # Capture first to avoid SIGPIPE/pipefail interaction with `grep -q`.
+    local status
+    status=$(git submodule status --recursive 2>/dev/null || true)
+    if grep -q '^-' <<< "$status"; then
         log "Initializing submodules..."
-        cd "$SCRIPT_DIR"
         git submodule update --init --recursive 2>&1 | tail -5
         echo ""
     fi
