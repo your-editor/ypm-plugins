@@ -16,6 +16,12 @@ SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 PLUGINS_DIR="$SCRIPT_DIR/ypm_plugins"
 MAN_DIR="$SCRIPT_DIR/man/man7"
 
+# Manpages in man/man7/ that intentionally have no plugin source
+# (e.g. ypm itself is not a plugin in this repo).
+ORPHAN_WHITELIST=(
+    "ypm.7"
+)
+
 # ── Colors ──────────────────────────────────────────────
 RED='\033[0;31m'
 GREEN='\033[0;32m'
@@ -194,11 +200,15 @@ clear_line
 # ── Orphan detection ────────────────────────────────────
 declare -a ORPHAN_LIST=()
 ORPHAN=0
+declare -A WHITELIST_MAP
+for w in "${ORPHAN_WHITELIST[@]}"; do
+    WHITELIST_MAP["$w"]=1
+done
 if [ -d "$MAN_DIR" ]; then
     shopt -s nullglob
     for f in "$MAN_DIR"/*.7; do
         fname="$(basename "$f")"
-        if [ -z "${CLAIMED[$fname]:-}" ]; then
+        if [ -z "${CLAIMED[$fname]:-}" ] && [ -z "${WHITELIST_MAP[$fname]:-}" ]; then
             ORPHAN_LIST+=("$fname")
             ((ORPHAN++))
         fi
