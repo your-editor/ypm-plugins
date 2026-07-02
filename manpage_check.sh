@@ -65,9 +65,15 @@ ensure_submodules() {
     # Capture first to avoid SIGPIPE/pipefail interaction with `grep -q`.
     local status
     status=$(git submodule status --recursive 2>/dev/null || true)
-    if grep -q '^-' <<< "$status"; then
-        log "Initializing submodules..."
-        git submodule update --init --recursive 2>&1 | tail -5
+    # Initialize ONLY the uninitialized submodules (prefixed with '-'). Never
+    # run a bare `git submodule update` on populated ones — that resets them to
+    # the recorded commit and silently reverts local work. We test whatever is
+    # currently checked out.
+    local uninit
+    uninit=$(awk '/^-/ {print $2}' <<< "$status")
+    if [ -n "$uninit" ]; then
+        log "Initializing missing submodules..."
+        printf '%s\n' "$uninit" | xargs git submodule update --init -- 2>&1 | tail -5
         echo ""
     fi
 }

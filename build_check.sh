@@ -129,8 +129,19 @@ checkout_ypm() {
     log "Checking out ypm-plugins branch: ${BOLD}$YPM_BRANCH${RESET}"
     git checkout "$YPM_BRANCH"
 
-    log "Initializing submodules..."
-    git submodule update --init --recursive 2>&1 | tail -5
+    # Initialize ONLY submodules that aren't populated yet. A populated
+    # submodule is left exactly as it sits on disk — we never run a bare
+    # `git submodule update`, which would reset every submodule to the commit
+    # recorded in the parent and silently revert local work. Workflow: push
+    # plugins first, then test whatever is currently checked out.
+    local uninit
+    uninit=$(git submodule status --recursive 2>/dev/null | awk '/^-/ {print $2}')
+    if [ -n "$uninit" ]; then
+        log "Initializing missing submodules..."
+        printf '%s\n' "$uninit" | xargs git submodule update --init -- 2>&1 | tail -5
+    else
+        log "All submodules already populated — testing current state."
+    fi
     echo ""
 }
 

@@ -34,11 +34,10 @@ if [ "$count" -eq 0 ]; then
     echo -e "  ${DIM}no .so files found${RESET}"
 fi
 
-# Reset submodules to clean state
-echo -e "  ${DIM}resetting submodules...${RESET}"
-cd "$SCRIPT_DIR"
-git submodule deinit -f --all 2>/dev/null
-git checkout -- ypm_plugins/ 2>/dev/null
+# NOTE: we intentionally do NOT touch git state here (no `submodule deinit`,
+# no `git checkout -- ypm_plugins/`). Those revert submodule pointers and wipe
+# working trees, discarding intentional, uncommitted changes. Cleaning only
+# removes build artifacts; anything git-tracked is left alone.
 
 echo ""
 echo -e "  ${GREEN}clean${RESET}"

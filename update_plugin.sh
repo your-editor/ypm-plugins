@@ -12,4 +12,15 @@ cwd=$(pwd)
 cd $plugin_name
 git checkout main || git checkout master
 git pull
-cp $(basename ${plugin_name})*.7 ${cwd}/man/man7/
+cd "$cwd"
+# Copy every manpage at the plugin root (named by full path, e.g.
+# lang-syntax-yaml.7), not just one matching the basename.
+shopt -s nullglob
+mans=("$plugin_name"/*.7)
+shopt -u nullglob
+if [ ${#mans[@]} -gt 0 ]; then
+    cp "${mans[@]}" "${cwd}/man/man7/"
+    echo "Copied ${#mans[@]} manpage(s) to man/man7/"
+else
+    echo "No *.7 manpage found in $plugin_name (nothing copied)."
+fi

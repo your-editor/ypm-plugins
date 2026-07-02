@@ -1,0 +1,6 @@
+# Local yed build sandbox created by build_check.sh
+/.build_check/
+
+# Compiled plugin artifacts (built during build_check.sh)
+*.so
+*.o
